@@ -155,8 +155,7 @@ class Buddypress_Share {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'admin_menu', $plugin_admin_page, 'bp_share_plugin_menu' );
-		$this->loader->add_action( 'network_admin_menu', $plugin_admin_page, 'bp_share_plugin_menu' );
+		$this->loader->add_action( bp_core_admin_hook(), $plugin_admin_page, 'bp_share_plugin_menu' );
 		$this->loader->add_action( 'admin_init', $plugin_admin_page, 'bp_share_settings_init' );
 		$this->loader->add_action( 'wp_ajax_bp_share_insert_services_ajax', $plugin_admin_page, 'bp_share_insert_services_ajax' );
 		$this->loader->add_action( 'wp_ajax_nopriv_bp_share_insert_services_ajax', $plugin_admin_page, 'bp_share_insert_services_ajax' );

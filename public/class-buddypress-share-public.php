@@ -114,8 +114,8 @@ class Buddypress_Share_Public {
 	 * @since    1.0.0
 	 */
 	function bp_share_activity_filter() {
-		$service		 = get_option( 'bp_share_services' );
-		$extra_options	 = get_option( 'bp_share_services_extra' );
+		$service		 = get_site_option( 'bp_share_services' );
+		$extra_options	 = get_site_option( 'bp_share_services_extra' );
 		$activity_type	 = bp_get_activity_type();
 		$activity_link	 = bp_get_activity_thread_permalink();
 		$activity_title	 = bp_get_activity_feed_item_title(); // use for description : bp_get_activity_feed_item_description()
