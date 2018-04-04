@@ -233,7 +233,6 @@ function bp_activity_share_check_config(){
 		if ( ! empty( $warnings ) ) :
 			return false;
 		endif;
-		add_action( $config['network_active'] ? 'network_admin_notices' : 'admin_notices', $warning);
 		// Display a warning message in network admin or admin
 	} 
 	return true;
