@@ -250,7 +250,7 @@ class Buddypress_Share_Activator {
 
                 $autoload = 'no';
 
-                add_option('bp_share_services', $new_service_empty, $deprecated, $autoload);
+                update_site_option('bp_share_services', $new_service_empty, $deprecated, $autoload);
 
             }
 
@@ -276,7 +276,7 @@ class Buddypress_Share_Activator {
 
                 $autoload = 'no';
 
-                add_option('bp_share_services_extra', $extra_option_new, $deprecated, $autoload);
+                update_site_option('bp_share_services_extra', $extra_option_new, $deprecated, $autoload);
 
             }
 
