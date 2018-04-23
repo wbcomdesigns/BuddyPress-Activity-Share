@@ -162,7 +162,7 @@ function run_buddypress_share() {
 
  */
 
-add_action('plugins_loaded', 'bpshare_plugin_init');
+add_action('bp_loaded', 'bpshare_plugin_init');
 
 function bpshare_plugin_init() {
 	if ( bp_activity_share_check_config() ){
