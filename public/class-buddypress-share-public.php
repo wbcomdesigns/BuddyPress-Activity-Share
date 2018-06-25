@@ -160,14 +160,14 @@ class Buddypress_Share_Public {
 					if ( isset( $key ) && $key == 'bp_share_wordpress' && $value[ 'chb_' . $key ] == 1 ) {
 						$description = '';
 						$img		 = '';
-						echo '<a target="blank" class="bp-share" href="http://wordpress.com/press-this.php?u=' . $activity_link . '&t=' . $activity_title . '&s=' . $description . '&i= ' . $img . ' "><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
+						echo '<a target="blank" class="bp-share" href="https://wordpress.com/wp-admin/press-this.php?u=' . $activity_link . '&t=' . $activity_title . '&s=' . $description . '&i= ' . $img . ' "><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
 					}
 					if ( isset( $key ) && $key == 'bp_share_pocket' && $value[ 'chb_' . $key ] == 1 ) {
 						echo '<a target="blank" class="bp-share" href="https://getpocket.com/save?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
 					}
 					if ( isset( $key ) && $key == 'bp_share_email' && $value[ 'chb_' . $key ] == 1 ) {
 						$email = 'mailto:?subject=' . $activity_link . '&body=Check out this site: ' . $activity_title . '" title="Share by Email';
-						echo '<a target="blank" class="bp-share" href="' . $email . '"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
+						echo '<a class="bp-share" href="' . $email . '" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
 					}
 				}
 			} else {
