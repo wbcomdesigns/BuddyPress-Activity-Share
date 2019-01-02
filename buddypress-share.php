@@ -25,7 +25,7 @@
  * Plugin Name:       BuddyPress Activity Social Share
  * Plugin URI:        https://www.wbcomdesigns.com
  * Description:       This plugin will add an extended feature to the big name “BuddyPress” that will allow to share Activity “Post Updates” to the social sites.
- * Version:           1.2.2
+ * Version:           2.0.0
  * Author:            Wbcom Designs<admin@wbcomdesigns.com>
  * Author URI:        https://www.wbcomdesigns.com
  * License:           GPL-2.0+
@@ -46,6 +46,7 @@ if ( ! defined('WPINC')) {
 }
 
 define( 'BP_SHARE', 'buddypress-share' );
+define( 'BP_ACTIVITY_SHARE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 define( 'BP_ACTIVITY_SHARE_PLUGIN_BASENAME',  plugin_basename( __FILE__ ) );
 
@@ -112,7 +113,7 @@ function bp_activity_share_plugin_actions($links, $file) {
 
 	if ( class_exists('BuddyPress') ) {
 
-		$settings_link = '<a href="' . admin_url("admin.php?page=buddypress-share") . '">' . __('Settings', BP_SHARE ) . '</a>';
+		$settings_link = '<a href="' . admin_url("admin.php?page=buddypress-share") . '">' . esc_html__('Settings', 'buddypress-share' ) . '</a>';
 
 		array_unshift($links, $settings_link); // before other links
 	}
@@ -212,12 +213,12 @@ function bp_activity_share_check_config(){
 		$warnings = array();
 		if ( !bp_core_do_network_admin() && !$config['blog_status'] ) {
 			add_action( 'admin_notices', 'bpshare_same_blog' );
-			$warnings[] = __( 'BuddyPress Activity Social Share requires to be activated on the blog where BuddyPress is activated.', BP_SHARE );
+			$warnings[] = esc_html__( 'BuddyPress Activity Social Share requires to be activated on the blog where BuddyPress is activated.', 'buddypress-share' );
 		}
 
 		if ( bp_core_do_network_admin() && !$config['network_status'] ) {
 			add_action( 'admin_notices', 'bpshare_same_network_config' );
-			$warnings[] = __( 'BuddyPress Activity Social Share and BuddyPress need to share the same network configuration.', BP_SHARE );
+			$warnings[] = esc_html__( 'BuddyPress Activity Social Share and BuddyPress need to share the same network configuration.', 'buddypress-share' );
 		}
 
 		if ( ! empty( $warnings ) ) :
@@ -228,14 +229,14 @@ function bp_activity_share_check_config(){
 	return true;
 }
 
-function bpshare_same_blog(){
+function bpshare_same_blog() {
 	echo '<div class="error"><p>'
-	. esc_html( __( 'BuddyPress Activity Social Share requires to be activated on the blog where BuddyPress is activated.', BP_SHARE ) )
+	. esc_html__( 'BuddyPress Activity Social Share requires to be activated on the blog where BuddyPress is activated.', 'buddypress-share' )
 	. '</p></div>';
 }
 
-function bpshare_same_network_config(){
+function bpshare_same_network_config() {
 	echo '<div class="error"><p>'
-	. esc_html( __( 'BuddyPress Activity Social Share and BuddyPress need to share the same network configuration.', BP_SHARE ) )
+	. esc_html__( 'BuddyPress Activity Social Share and BuddyPress need to share the same network configuration.', 'buddypress-share' )
 	. '</p></div>';
 }

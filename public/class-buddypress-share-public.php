@@ -70,7 +70,9 @@ class Buddypress_Share_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		wp_enqueue_style( 'wpb-fa1', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+		if ( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
+			wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
+		}
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/buddypress-share-public.css', array(), $this->version, 'all' );
 	}
 
@@ -130,7 +132,7 @@ class Buddypress_Share_Public {
 		}
 		?>
 		<span class="bp-share-btn">
-			<a class="button item-button bp-secondary-action bp-share-button" rel="nofollow"><?php _e( "$share_button_text", BP_SHARE ); ?></a>
+			<a class="button item-button bp-secondary-action bp-share-button" rel="nofollow"><?php esc_html_e( "$share_button_text", 'buddypress-share' ); ?></a>
 		</span>
 		</div>
 		<div class="service-buttons <?php echo $activity_type ?>" style="display: none;">
@@ -171,7 +173,7 @@ class Buddypress_Share_Public {
 					}
 				}
 			} else {
-				_e( 'Please enable share services!', BP_SHARE );
+				esc_html_e( 'Please enable share services!', 'buddypress-share' );
 			}
 			do_action( 'bp_share_user_services', $services = array(), $activity_link, $activity_title );
 			?>

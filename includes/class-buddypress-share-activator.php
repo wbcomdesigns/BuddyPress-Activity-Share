@@ -76,11 +76,11 @@ class Buddypress_Share_Activator {
 
                             "chb_bp_share_facebook" => 1,
 
-                            "service_name" => __( 'Facebook', BP_SHARE ),
+                            "service_name" => esc_html__( 'Facebook', 'buddypress-share' ),
 
-                            "service_icon" => "fa fa-facebook",
+                            "service_icon" => "fab fa-facebook-f",
 
-                            "service_description" => __( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', BP_SHARE )
+                            "service_description" => esc_html__( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', 'buddypress-share' )
 
                         ),
 
@@ -88,11 +88,11 @@ class Buddypress_Share_Activator {
 
                             "chb_bp_share_twitter" => 1,
 
-                            "service_name" => __( 'Twitter', BP_SHARE ),
+                            "service_name" => esc_html__( 'Twitter', 'buddypress-share' ),
 
-                            "service_icon" => "fa fa-twitter",
+                            "service_icon" => "fab fa-twitter",
 
-                            "service_description" => __( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', BP_SHARE)
+                            "service_description" => esc_html__( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', 'buddypress-share' )
 
                         ),
 
@@ -100,11 +100,11 @@ class Buddypress_Share_Activator {
 
                             "chb_bp_share_linkedin" => 1,
 
-                            "service_name" => __('Linkedin', BP_SHARE ),
+                            "service_name" => esc_html__('Linkedin', 'buddypress-share' ),
 
-                            "service_icon" => "fa fa-linkedin",
+                            "service_icon" => "fab fa-linkedin-in",
 
-                            "service_description" => __( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', BP_SHARE )
+                            "service_description" => esc_html__( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', 'buddypress-share' )
 
                         ),
 
@@ -112,11 +112,11 @@ class Buddypress_Share_Activator {
 
                             "chb_bp_share_google_plus" => 1,
 
-                            "service_name" => __( 'Google Plus', BP_SHARE ),
+                            "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
 
-                            "service_icon" => "fa fa-google-plus",
+                            "service_icon" => "fab fa-google-plus-g",
 
-                            "service_description" => __( 'Google Plus is an interest-based social network that is owned and operated by Google.', BP_SHARE )
+                            "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
 
                         ),
 
@@ -130,11 +130,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_facebook" => 1,
 
-                        "service_name" => __( 'Facebook', BP_SHARE ),
+                        "service_name" => esc_html__( 'Facebook', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-facebook",
+                        "service_icon" => "fab fa-facebook-f",
 
-                        "service_description" => __( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', BP_SHARE )
+                        "service_description" => esc_html__( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', 'buddypress-share' )
 
                     );
 
@@ -142,11 +142,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_twitter" => 1,
 
-                        "service_name" => __( 'Twitter', BP_SHARE ),
+                        "service_name" => esc_html__( 'Twitter', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-twitter",
+                        "service_icon" => "fab fa-twitter",
 
-                        "service_description" => __( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', BP_SHARE )
+                        "service_description" => esc_html__( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', 'buddypress-share' )
 
                     );
 
@@ -154,11 +154,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_linkedin" => 1,
 
-                        "service_name" => __( 'Linkedin', BP_SHARE ),
+                        "service_name" => esc_html__( 'Linkedin', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-linkedin",
+                        "service_icon" => "fab fa-linkedin-in",
 
-                        "service_description" => __( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', BP_SHARE )
+                        "service_description" => esc_html__( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', 'buddypress-share' )
 
                     );
 
@@ -166,11 +166,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_google_plus" => 1,
 
-                        "service_name" => __( 'Google Plus', BP_SHARE ),
+                        "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-google-plus",
+                        "service_icon" => "fab fa-google-plus-g",
 
-                        "service_description" => __( 'Google Plus is an interest-based social network that is owned and operated by Google.', BP_SHARE )
+                        "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
 
                     );
 
@@ -198,11 +198,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_facebook" => 1,
 
-                        "service_name" => __( 'Facebook', BP_SHARE ),
+                        "service_name" => esc_html__( 'Facebook', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-facebook",
+                        "service_icon" => "fab fa-facebook-f",
 
-                        "service_description" => __( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', BP_SHARE )
+                        "service_description" => esc_html__( 'Facebook is an American for-profit corporation and online social media and social networking service based in Menlo Park, California, United States.', 'buddypress-share' )
 
                     ),
 
@@ -210,11 +210,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_twitter" => 1,
 
-                        "service_name" => __( 'Twitter', BP_SHARE ),
+                        "service_name" => esc_html__( 'Twitter', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-twitter",
+                        "service_icon" => "fab fa-twitter",
 
-                        "service_description" => __( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', BP_SHARE)
+                        "service_description" => esc_html__( 'Twitter is an online news and social networking service where users post and read short 140-character messages called \'tweets\'. Registered users can post and read tweets, but those who are unregistered can only read them.', 'buddypress-share' )
 
                     ),
 
@@ -222,11 +222,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_linkedin" => 1,
 
-                        "service_name" =>  __( 'Linkedin', BP_SHARE ),
+                        "service_name" =>  esc_html__( 'Linkedin', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-linkedin",
+                        "service_icon" => "fab fa-linkedin-in",
 
-                        "service_description" => __( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', BP_SHARE )
+                        "service_description" => esc_html__( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', 'buddypress-share' )
 
                     ),
 
@@ -234,11 +234,11 @@ class Buddypress_Share_Activator {
 
                         "chb_bp_share_google_plus" => 1,
 
-                        "service_name" => __( 'Google Plus', BP_SHARE ),
+                        "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-google-plus",
+                        "service_icon" => "fab fa-google-plus-g",
 
-                        "service_description" => __( 'Google Plus is an interest-based social network that is owned and operated by Google.', BP_SHARE )
+                        "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
 
                     ),
 

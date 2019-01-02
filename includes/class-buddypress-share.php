@@ -70,7 +70,7 @@ class Buddypress_Share {
 	public function __construct() {
 
 		$this->plugin_name		 = 'buddypress-share';
-		$this->version			 = '1.0.0';
+		$this->version			 = '2.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -107,6 +107,8 @@ class Buddypress_Share {
 		 * of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-buddypress-share-i18n.php';
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/wbcom/wbcom-admin-settings.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.

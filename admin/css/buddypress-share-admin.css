@@ -1246,3 +1246,7 @@ p.error_service_description{
 #bpas_faq_accordion .ui-accordion-header span {
     margin-right: 10px;
 }
+
+.bp-share-services-extra tr {
+    border-bottom: none!important;
+}

@@ -47,10 +47,10 @@ class Buddypress_Share_Admin {
      * @param      string    $plugin_name       The name of this plugin.
      * @param      string    $version    The version of this plugin.
      */
-    public function __construct($plugin_name, $version) {
+    public function __construct( $plugin_name, $version ) {
 
         $this->plugin_name = $plugin_name;
-        $this->version = $version;
+        $this->version     = $version;
     }
 
     /**
@@ -59,22 +59,13 @@ class Buddypress_Share_Admin {
      * @since    1.0.0
      */
     public function enqueue_styles($hook) {
-        if($hook != 'settings_page_buddypress-share') {
+        if( 'wb-plugins_page_buddypress-share' !== $hook ) {
             return;
-         }
-        /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Buddypress_Share_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Buddypress_Share_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-        wp_enqueue_style('wpb-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/buddypress-share-admin.css', array(), $this->version, 'all');
+        }
+        if ( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
+            wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
+        }
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url(__FILE__) . 'css/buddypress-share-admin.css', array(), $this->version, 'all' );
     }
 
     /**
@@ -83,25 +74,11 @@ class Buddypress_Share_Admin {
      * @since    1.0.0
      */
     public function enqueue_scripts($hook) {
-         if($hook != 'settings_page_buddypress-share') {
+        if( 'wb-plugins_page_buddypress-share' !== $hook ) {
             return;
-         }
-        /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Buddypress_Share_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Buddypress_Share_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-        if ( !wp_script_is( 'jquery-ui-accordion', 'enqueued' ) ) {
-            wp_enqueue_script( 'jquery-ui-accordion' );
         }
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/buddypress-share-admin.js', array('jquery'), $this->version, false);
-        wp_localize_script($this->plugin_name, 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php'), 'nonce' => wp_create_nonce( 'bp_share_nonce' )));
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url(__FILE__) . 'js/buddypress-share-admin.js', array('jquery'), $this->version, false );
+        wp_localize_script( $this->plugin_name, 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php'), 'nonce' => wp_create_nonce( 'bp_share_nonce' )));
     }
 
 }
