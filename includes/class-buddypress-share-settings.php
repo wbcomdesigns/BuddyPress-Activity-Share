@@ -220,7 +220,7 @@ class Buddypress_Share_Options_Page {
                 <div class="bpss-header">
                     <?php echo do_shortcode( '[wbcom_admin_setting_header]' ); ?>
                     <h1 class="wbcom-plugin-heading">
-                        <?php esc_html_e( 'BuddyPress Activity Social Share', 'buddypress-share' ); ?>
+                        <?php esc_html_e( 'BuddyPress Activity Social Share Settings', 'buddypress-share' ); ?>
                     </h1>
 
                 </div>
