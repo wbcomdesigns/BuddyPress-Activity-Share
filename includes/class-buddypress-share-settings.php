@@ -233,11 +233,7 @@ class Buddypress_Share_Options_Page {
                     ?>
                 </div>
             </div>
-
-
-
     <?php }
-
 
 
    public function bpas_plugin_settings_tabs( $current ) {

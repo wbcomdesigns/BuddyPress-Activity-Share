@@ -477,7 +477,7 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 			if ( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
 				wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
 			}
-			if ( !wp_script_is( 'wbcom-admin-setting-js', 'enqueued' ) ) {
+			if ( !wp_script_is( 'wbcom_admin_setting_js', 'enqueued' ) ) {
 
 				wp_register_script(
 				$handle		 = 'wbcom_admin_setting_js', $src		 = BP_ACTIVITY_SHARE_PLUGIN_URL . 'admin/wbcom/assets/js/wbcom-admin-setting.js', $deps		 = array( 'jquery' ), $ver		 = time(), $in_footer	 = true
