@@ -1,9 +1,9 @@
 {
   "name": "buddypress-share",
-  "version": "0.1.0",
-  "url": "https://github.com/wbcomdesigns/buddypress-groups-review",
+  "version": "2.0.0",
+  "url": "https://github.com/wbcomdesigns/buddypress-activity-social-share/",
   "license": "GPL-2.0+",
-  "description": "Group review plugin for BuddyPress",
+  "description": "Free WordPress plugin to allow anyone easily share BuddyPress Activites on major social media",
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-plugin-wordpress": "^0.1.0",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wbcomdesigns/buddypress-groups-review"
+    "url": "https://github.com/wbcomdesigns/buddypress-activity-social-share/"
   },
   "dependencies": {
     "load-grunt-tasks": "^3.5.2"
