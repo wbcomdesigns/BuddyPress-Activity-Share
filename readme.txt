@@ -111,7 +111,7 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 == Changelog ==
 
 = 2.0.0 =
-* * Enhancement - Improve Backend UI where you can all wbcom plugin's settings at one place. #31
+* Enhancement - Improve Backend UI where you can manage all wbcom plugin's settings at one place. #31
 
 = 1.2.2 =
 * Fix - Compatibility with BuddyPress 4.1.0. #29
