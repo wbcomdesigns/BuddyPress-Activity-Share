@@ -98,13 +98,11 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 1. BuddyPress Activity Social Share admin setting page View : It is the screen that shows admin settings at BuddyPress Activity Social Share under General tab and corresponds to screenshot-1.(png|jpg|jpeg|gif).
 
-2. The screenshot shows how to add new service and corresponds to screenshot-2.(png|jpg|jpeg|gif).
+2. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-2.(png|jpg|jpeg|gif).
 
-3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(png|jpg|jpeg|gif).
+3. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(png|jpg|jpeg|gif).
 
-4. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-4.(png|jpg|jpeg|gif).
-
-5. The screenshot shows Social Share button & services for logged-out users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-5.(png|jpg|jpeg|gif).
+4. The screenshot shows Social Share button & services for logged-out users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-4.(png|jpg|jpeg|gif).
 
 
 
@@ -158,4 +156,3 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 = 1.0.0 =
 * JS fixes for BP 2.7.
-
