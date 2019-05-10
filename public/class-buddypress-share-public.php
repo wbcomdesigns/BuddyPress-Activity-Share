@@ -70,8 +70,8 @@ class Buddypress_Share_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		if ( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
-			wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
+		if ( ! wp_style_is( 'wb-font-awesome', 'enqueued' ) ) {
+			wp_enqueue_style( 'wb-font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
 		}
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/buddypress-share-public.css', array(), $this->version, 'all' );
 	}

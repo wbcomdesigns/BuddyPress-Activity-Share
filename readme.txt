@@ -4,8 +4,8 @@ Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
-Tested up to: 5.0.3
-Stable tag: 2.0.0
+Tested up to: 5.2
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,9 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 
 == Changelog ==
+
+= 2.0.1 =
+* Fix - Compatibility with BuddyPress 4.3.0. #33
 
 = 2.0.0 =
 * Enhancement - Improve Backend UI where you can manage all wbcom plugin's settings at one place. #31
