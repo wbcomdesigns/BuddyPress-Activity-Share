@@ -154,7 +154,7 @@ jQuery(function() {
 
                 jQuery.post(my_ajax_object.ajax_url, data, function (response) {
 
-                        location.reload();
+                       location.reload();
 
                 });
 

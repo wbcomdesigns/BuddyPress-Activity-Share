@@ -140,7 +140,7 @@ class Buddypress_Share_Public {
 			if ( !empty( $service ) ) {
 				foreach ( $service as $key => $value ) {
 					if ( isset( $key ) && $key == 'bp_share_facebook' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="https://www.facebook.com/sharer/sharer.php?quote=' . $activity_title . '&u=' . $activity_link . '" rel="facebook"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
+						echo '<a target="blank" class="bp-share" href="https://www.facebook.com/sharer/sharer.php?u=' . $activity_link . '" rel="facebook"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
 					}
 					if ( isset( $key ) && $key == 'bp_share_twitter' && $value[ 'chb_' . $key ] == 1 ) {
 						echo '<a target="blank" class="bp-share" href="http://twitter.com/share?text=' . $activity_title . '&url=' . $activity_link . '" rel="twitter"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
@@ -205,21 +205,6 @@ class Buddypress_Share_Public {
 				$activity_img		 = '';
 				$activity_assets	 = array();
 				$activity_content	 = '';
-//				if ( is_single() ) {
-//					$activity_permalink	 = get_permalink( $post->ID );
-//					$activity_content	 = get_post_field( 'post_content', $post->ID );
-//					$title				 = get_the_title( $post->ID );
-//					preg_match_all( '/(src|width|height)=("[^"]*")/', $activity_content, $result );
-//
-//					if ( isset( $result[ 2 ] ) && !empty( $result[ 2 ] ) && isset( $result[ 1 ] ) && !empty( $result[ 1 ] ) ) {
-//						$result2 = array_map( function($i) {
-//							return trim( $i, '"' );
-//						}, $result[ 2 ] );
-//						foreach ( $result[ 1 ] as $key => $result_key ) {
-//							$activity_assets[ $result_key ] = $result2[ $key ];
-//						}
-//					}
-//				} else {
 				$activity_obj		 = new BP_Activity_Activity( $bp->current_action );
 				$activity_permalink	 = bp_activity_get_permalink( $bp->current_action );
 				preg_match_all( '/(src|width|height)=("[^"]*")/', $activity_obj->content, $result );
@@ -251,20 +236,29 @@ class Buddypress_Share_Public {
 				} else {
 					$activity_content = $activity_obj->content;
 				}
-//				}
-//				echo '<pre>';
-//				print_r( $activity_content );
-//				die;
+				$activity_content = wp_strip_all_tags( $activity_content );
+				$activity_content = stripslashes( $activity_content );
+				$extra_options = get_site_option('bp_share_services_extra');
+				$enable_user_avatar = false;
+				if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
+    				if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
+    					$enable_user_avatar = true;
+    				}
+    			}		
 				?>
 				<meta property="og:type"   content="article" />
 				<meta property="og:url"    content="<?php echo esc_url( $activity_permalink ); ?>" />
 				<meta property="og:title"  content="<?php echo $title; ?>" />
-				<meta property="og:description" content='<?php echo $activity_content; ?>' />
-				<meta property="og:image"  content="<?php echo $activity_assets[ 'src' ]; ?>" />
-				<meta property="og:image:secure_url" content="<?php echo $activity_assets[ 'src' ]; ?>" />
-				<meta property="og:image:width" content="400" />
-				<meta property="og:image:height" content="300" />
-				<?php
+				<meta property="og:description" content="<?php echo $activity_content; ?>" />
+				<?php if ( $enable_user_avatar ) { ?>
+					<meta property="og:image"  content="<?php echo $activity_permalink; ?>" />
+					<meta property="og:image:secure_url" content="<?php echo $activity_permalink; ?>" />
+					<meta property="og:image:width" content="400" />
+					<meta property="og:image:height" content="300" />
+				<?php } else { ?>
+					<meta property="og:image"  content="<?php echo ''; ?>" />
+					<meta property="og:image:secure_url" content="<?php echo ''; ?>" />
+				<?php }
 			} else {
 				return;
 			}
