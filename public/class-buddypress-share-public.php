@@ -125,7 +125,7 @@ class Buddypress_Share_Public {
 		if ( !is_user_logged_in() ) {
 			echo '<div class = "activity-meta" >';
 		}
-		$share_button_text	 = 'Share';
+		$share_button_text	 = esc_html__( 'Share', 'buddypress-share' );
 		$updated_text		 = apply_filters( 'bpas_share_button_text_override', $share_button_text );
 		if ( isset( $updated_text ) ) {
 			$share_button_text = $updated_text;
