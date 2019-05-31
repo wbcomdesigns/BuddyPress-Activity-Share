@@ -205,6 +205,7 @@ class Buddypress_Share_Public {
 				$activity_img		 = '';
 				$activity_assets	 = array();
 				$activity_content	 = '';
+				$first_img_src       = '';
 				$activity_obj		 = new BP_Activity_Activity( $bp->current_action );
 				$activity_permalink	 = bp_activity_get_permalink( $bp->current_action );
 				preg_match_all( '/(src|width|height)=("[^"]*")/', $activity_obj->content, $result );
@@ -236,6 +237,23 @@ class Buddypress_Share_Public {
 				} else {
 					$activity_content = $activity_obj->content;
 				}
+				
+				preg_match_all('/<img.*?src\s*=.*?>/', $activity_obj->content, $matches );
+				if ( isset( $matches[0][0] ) ) {
+					preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $matches[0][0], $matches2 );
+					if ( isset( $matches2[1][0] ) ) {
+						$first_img_src = $matches2[1][0];
+					}	
+				}
+
+				$avatar_url = get_avatar_url( $activity_obj->user_id, array( 'size' => 300 ) );
+
+				if ( empty( $first_img_src ) ) {
+					$og_image = $avatar_url;
+				} else {
+					$og_image = $first_img_src;
+				}
+				
 				$activity_content = wp_strip_all_tags( $activity_content );
 				$activity_content = stripslashes( $activity_content );
 				$extra_options = get_site_option('bp_share_services_extra');
@@ -250,16 +268,15 @@ class Buddypress_Share_Public {
 				<meta property="og:url"    content="<?php echo esc_url( $activity_permalink ); ?>" />
 				<meta property="og:title"  content="<?php echo $title; ?>" />
 				<meta property="og:description" content="<?php echo $activity_content; ?>" />
-				<?php if ( $enable_user_avatar ) { ?>
-					<meta property="og:image"  content="<?php echo $activity_permalink; ?>" />
-					<meta property="og:image:secure_url" content="<?php echo $activity_permalink; ?>" />
-					<meta property="og:image:width" content="400" />
-					<meta property="og:image:height" content="300" />
-				<?php } else { ?>
-					<meta property="og:image"  content="<?php echo BP_ACTIVITY_SHARE_PLUGIN_URL . 'public/images/default.png'; ?>" />
-					<meta property="og:image:secure_url" content="<?php echo BP_ACTIVITY_SHARE_PLUGIN_URL . 'public/images/default.png'; ?>" />
-				<?php }
-			} else {
+				<?php if ( $enable_user_avatar ) {
+					$og_image = $avatar_url;
+				}
+				?>
+				<meta property="og:image" content="<?php echo $og_image; ?>" />
+				<meta property="og:image:secure_url" content="<?php echo $og_image; ?>" />
+				<meta property="og:image:width" content="400" />
+				<meta property="og:image:height" content="300" />
+			<?php } else {
 				return;
 			}
 		}
