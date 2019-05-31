@@ -256,8 +256,8 @@ class Buddypress_Share_Public {
 					<meta property="og:image:width" content="400" />
 					<meta property="og:image:height" content="300" />
 				<?php } else { ?>
-					<meta property="og:image"  content="<?php echo home_url(); ?>" />
-					<meta property="og:image:secure_url" content="<?php echo home_url(); ?>" />
+					<meta property="og:image"  content="<?php echo BP_ACTIVITY_SHARE_PLUGIN_URL . 'public/images/default.png'; ?>" />
+					<meta property="og:image:secure_url" content="<?php echo BP_ACTIVITY_SHARE_PLUGIN_URL . 'public/images/default.png'; ?>" />
 				<?php }
 			} else {
 				return;
