@@ -231,8 +231,10 @@ class Buddypress_Share_Public {
 					$title = substr( $title, 0, -1 );
 				}
 
+				$activity_content = preg_replace('#<ul class="rtmedia-list(.*?)</ul>#', ' ', $activity_obj->content );
+				
 				if ( !empty( $activity_assets[ 'src' ] ) ) {
-					$activity_content	 = explode( '<span>', $activity_obj->content );
+					$activity_content	 = explode( '<span>', $activity_content );
 					$activity_content	 = strip_tags( ent2ncr( trim( convert_chars( $activity_content[ 1 ] ) ) ) );
 				} else {
 					$activity_content = $activity_obj->content;
