@@ -63,7 +63,7 @@ class Buddypress_Share_Admin {
             return;
         }
         if ( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
-            wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
+            wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
         }
         wp_enqueue_style( $this->plugin_name, plugin_dir_url(__FILE__) . 'css/buddypress-share-admin.css', array(), $this->version, 'all' );
     }

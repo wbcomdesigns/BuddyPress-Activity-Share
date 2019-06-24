@@ -289,7 +289,7 @@ class Buddypress_Share_Options_Page {
                                             <div class="active second plugin-version-author-uri">
                                             </div>
                                         </td>
-                                        <td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="<?php echo $service_key; ?>"><i class="fas fa-window-close"></i></p></td>
+                                        <td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="<?php echo $service_key; ?>"><i class="fa fa-window-close"></i></p></td>
                                     </tr>
                                     <?php
                                 }
@@ -376,7 +376,7 @@ class Buddypress_Share_Options_Page {
                     $html_view .= '<div class="active second plugin-version-author-uri">';
                     $html_view .= '</div>';
                     $html_view .= '</td>';
-                    $html_view .= '<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="' . $service_key . '"><i class="fas fa-window-close"></i></p></td>';
+                    $html_view .= '<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="' . $service_key . '"><i class="fa fa-window-close"></i></p></td>';
                     $html_view .= '</tr>';
                 } else {
                     $new_value = array(
@@ -410,7 +410,7 @@ class Buddypress_Share_Options_Page {
                     $html_view .= '<div class="active second plugin-version-author-uri">';
                     $html_view .= '</div>';
                     $html_view .= '</td>';
-                    $html_view .= '<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="' . $service_key . '"><i class="fas fa-window-close"></i></p></td>';
+                    $html_view .= '<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="' . $service_key . '"><i class="fa fa-window-close"></i></p></td>';
                     $html_view .= '</tr>';
                 }
             } else {
