@@ -4,8 +4,8 @@ Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
-Tested up to: 5.2.1
-Stable tag: 2.1.0
+Tested up to: 5.2.2
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,9 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 
 == Changelog ==
+
+= 2.2.0 =
+* Fix - Removed font-awesome 5.0 #37
 
 = 2.1.0 =
 * Fix - Fixed single page error. #34
