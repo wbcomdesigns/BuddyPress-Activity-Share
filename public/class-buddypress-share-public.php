@@ -145,9 +145,6 @@ class Buddypress_Share_Public {
 					if ( isset( $key ) && $key == 'bp_share_twitter' && $value[ 'chb_' . $key ] == 1 ) {
 						echo '<a target="blank" class="bp-share" href="http://twitter.com/share?text=' . $activity_title . '&url=' . $activity_link . '" rel="twitter"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
 					}
-					if ( isset( $key ) && $key == 'bp_share_google_plus' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="https://plus.google.com/share?url=' . $activity_link . '&text=' . $activity_title . '" rel="google-plus"><span class="fa-stack fa-lg"><i class="' . $value[ 'service_icon' ] . '"></i></span></a>';
-					}
 					if ( isset( $key ) && $key == 'bp_share_pinterest' && $value[ 'chb_' . $key ] == 1 ) {
 						$media	 = '';
 						$video	 = '';

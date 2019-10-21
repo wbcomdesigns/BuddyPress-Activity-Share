@@ -108,17 +108,17 @@ class Buddypress_Share_Activator {
 
                         ),
 
-                        "bp_share_google_plus" => array(
+                        // "bp_share_google_plus" => array(
 
-                            "chb_bp_share_google_plus" => 1,
+                        //     "chb_bp_share_google_plus" => 1,
 
-                            "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
+                        //     "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
 
-                            "service_icon" => "fa fa-google-plus",
+                        //     "service_icon" => "fa fa-google-plus",
 
-                            "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
+                        //     "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
 
-                        ),
+                        // ),
 
                     );
 
@@ -162,17 +162,17 @@ class Buddypress_Share_Activator {
 
                     );
 
-                    $google_plus = array(
+                    // $google_plus = array(
 
-                        "chb_bp_share_google_plus" => 1,
+                    //     "chb_bp_share_google_plus" => 1,
 
-                        "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
+                    //     "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
 
-                        "service_icon" => "fa fa-google-plus",
+                    //     "service_icon" => "fa fa-google-plus",
 
-                        "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
+                    //     "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
 
-                    );
+                    // );
 
                     foreach ($services as $key => $value) {
 
@@ -182,7 +182,7 @@ class Buddypress_Share_Activator {
 
                         $services['bp_share_linkedin'] = $linkedin;
 
-                        $services['bp_share_google_plus'] = $google_plus;
+                        //$services['bp_share_google_plus'] = $google_plus;
 
                     }
 
@@ -229,19 +229,6 @@ class Buddypress_Share_Activator {
                         "service_description" => esc_html__( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', 'buddypress-share' )
 
                     ),
-
-                    "bp_share_google_plus" => array(
-
-                        "chb_bp_share_google_plus" => 1,
-
-                        "service_name" => esc_html__( 'Google Plus', 'buddypress-share' ),
-
-                        "service_icon" => "fa fa-google-plus",
-
-                        "service_description" => esc_html__( 'Google Plus is an interest-based social network that is owned and operated by Google.', 'buddypress-share' )
-
-                    ),
-
                 );
 
 // The option hasn't been added yet. We'll add it with $autoload set to 'no'.

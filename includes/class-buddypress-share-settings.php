@@ -206,7 +206,6 @@ class Buddypress_Share_Options_Page {
                                             <option value="">-<?php esc_html_e( 'select', 'buddypress-share' ); ?>-</option>
                                             <option value="bp_share_facebook"><?php esc_html_e( 'Facebook', 'buddypress-share' ); ?></option>
                                             <option value="bp_share_twitter"><?php esc_html_e( 'Twitter', 'buddypress-share' ); ?></option>
-                                            <option value="bp_share_google_plus"><?php esc_html_e( 'Google Plus', 'buddypress-share' ); ?></option>
                                             <option value="bp_share_pinterest"><?php esc_html_e( 'Pinterest', 'buddypress-share' ); ?></option>
                                             <option value="bp_share_linkedin"><?php esc_html_e( 'Linkedin', 'buddypress-share' ); ?></option>
                                             <option value="bp_share_reddit"><?php esc_html_e( 'Reddit', 'buddypress-share' ); ?></option>
