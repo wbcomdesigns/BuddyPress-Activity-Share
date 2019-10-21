@@ -109,3 +109,12 @@ a.bp-share.has-popup {
     color: #EF3E56;
 
 }
+
+.bp-nouveau .activity-list .activity-item .activity-meta.action .bp-share-button::before {
+    content: "\f237";
+}
+.bp-nouveau .button.item-button.bp-secondary-action.bp-share-button {
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+}
