@@ -4,18 +4,14 @@ Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
-Tested up to: 5.2.2
-Stable tag: 2.2.0
+Tested up to: 5.2.4
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Free WordPress plugin to allow anyone easily share BuddyPress Activites on major social media (Facebook, Twitter, Google+, Linkedin ).
 
-
-
 == Description ==
-
-
 
 Free WordPress plugin to allow anyone easily share BuddyPress Activites on major social media (Facebook, Twitter, Google+, Linkedin ).
 
@@ -83,6 +79,10 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 
 == Changelog ==
+
+= 2.2.1 =
+* Fix - Removed Google+ Option as this is no more working. #39
+* Fix - Nouveau - improved UI of share button. #49 
 
 = 2.2.0 =
 * Fix - Removed font-awesome 5.0 #37
