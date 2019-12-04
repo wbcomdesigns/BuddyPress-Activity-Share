@@ -1,0 +1,220 @@
+[
+  {
+    "name": "Custom Font Uploadery",
+    "description": "It also allows you to upload your own custom font to your site and use them using custom css.",
+    "icon": "fa fa-2x fa-upload",
+    "slug": "custom-font-uploader",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/custom-font-uploader/"
+  },
+  {
+    "name": "BuddyPress Activity Filter",
+    "description": "Admin can set default and customised activities to be listed on front-end.",
+    "icon": "fa fa-2x fa-filter",
+    "slug": "bp-activity-filter",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-activity-filter/"
+  },
+  {
+    "name": "BuddyPress Activity Social Share",
+    "description": "This plugin allows anyone easily share BuddyPress Activites on major social media (Facebook, Twitter, Google+, Linkedin ).",
+    "icon": "fa fa-2x fa-share-alt",
+    "slug": "bp-activity-social-share",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-activity-social-share/"
+  },
+  {
+    "name": "BuddyPress Create Group Type",
+    "description": "It will help to create group type for BuddyPress Groups.",
+    "icon": "fa fa-2x fa-sitemap",
+    "slug": "bp-create-group-type",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-create-group-type/"
+  },
+  {
+    "name": "BuddyPress Member Reviews",
+    "description": "This plugin allows only site members to add reviews to the buddypress members on the site and even rate the member’s profile out of 5 points with multiple review criteria.",
+    "icon": "fa fa-2x fa-user",
+    "slug": "bp-user-profile-reviews",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-user-profile-reviews/"
+  },
+  {
+    "name": "BuddyPress Group Reviews",
+    "description": "This plugin allows the BuddyPress Members to give reviews to the BuddyPress groups on the site. The review form allows the users to give text review, even rate the group on the basis of multiple criterias.",
+    "icon": "fa fa-2x fa-users",
+    "slug": "review-buddypress-groups",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/review-buddypress-groups/"
+  },
+  {
+    "name": "BuddyPress Favorite Notification",
+    "slug": "bp-favorite-notification",
+    "description": "BuddyPress Favorite Notification adds a notification for BuddyPress activity.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-favorite-notification/",
+    "icon": "fa fa-2x fa-bell"
+  },
+  {
+    "name": "Custom Email Options",
+    "slug": "custom-email-options",
+    "description": "Override default email options of Worpdress.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/custom-email-options/",
+    "icon": "fa fa-2x fa-at"
+  },
+  {
+    "name": "BuddyPress Checkins",
+    "slug": "bp-check-in",
+    "description": "This plugin allows BuddyPress members to share their location when they are posting activities, you can add places where you visited, nearby locations based on google places.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-check-in/",
+    "icon": "fa fa-2x fa-map-marker"
+  },
+  {
+    "name": "BuddyPress Job Manager",
+    "slug": "bp-job-manager",
+    "description": "Incorporates BuddyPress with the WP Job Manager plugin by creating specific tabs in employer’s and candidate’s profiles.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-job-manager/",
+    "icon": "fa fa-2x fa-briefcase"
+  },
+  {
+    "name": "BuddyPress user ToDo List",
+    "slug": "bp-user-to-do-list",
+    "description": "This plugin allows you to create your personal task list with timestamp. You can mark them complete when you are done with them. It will also send reminder when you have any overdue task.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-user-to-do-list/",
+    "icon": "fa fa-2x fa-list-ol"
+  },
+  {
+    "name": "Shortcodes for BuddyPress",
+    "slug": "shortcodes-for-buddypress",
+    "description": "This plugin will add an extended feature to the big name “BuddyPress” that will generate Shortcode for Listing Activity Streams , Members and Groups on any post/page in website.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/shortcodes-for-buddypress/",
+    "icon": "fa fa-2x fa-code"
+  },
+  {
+    "name": "Woo Open Graph",
+    "slug": "woo-open-graph",
+    "description": "This plugin will add an extended feature to the big name “WooCommerce” that will adds well executed and accurate Open Graph Meta Tags to your site with title,description and WooCommerce featured image.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/woo-open-graph/",
+    "icon": "fa fa-2x fa-bar-chart"
+  },
+  {
+    "name": "BuddyPress Lock",
+    "slug": "lock-my-bp",
+    "description": "This plugin allows the administrator to lock the certain parts of their site. It help to create private BuddyPress community by locking certain BuddyPress Components, WordPress Pages, Custom Post Types for public view without using any membership plugin.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/lock-my-bp/",
+    "icon": "fa fa-2x fa-lock"
+  },
+  {
+    "name": "Woo Audio Preview",
+    "slug": "woo-audio-preview",
+    "description": "This plugin Allows playing the audio files in sample mode to prevent unauthorized downloading of the audio files. It helps to display sample files at single product page.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/woo-audio-preview/",
+    "icon": "fa fa-2x fa-volume-up"
+  },
+  {
+    "name": "WordPress System Log",
+    "slug": "wp-system-log",
+    "description": "This plugin helps administrators of the site see their environment on which the site is currently running that includes WordPress environment, tha database it requires, Server Environment and the plugins installed and activated on the site.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/wp-system-log/",
+    "icon": "fa fa-2x fa-file"
+  },
+  {
+    "name": "BP Post From Anywhere",
+    "slug": "bp-post-from-anywhere",
+    "description": "This plugin will generate shortcode and widgets for post updates section for activities so you can post update from anywhere, it might be sidebar, some page or any template file.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/bp-post-from-anywhere/",
+    "icon": "fa fa-2x fa-edit"
+  },
+  {
+    "name": "Woo Document Preview",
+    "slug": "woo-document-preview",
+    "description": "This will allow you to add document preview at single product page. Which helps to offer more better idea when you are selling ebooks, pdf or some documents.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/woo-document-preview/",
+    "icon": "fa fa-2x fa-file"
+  },
+  {
+    "name": "WordPress Media Category",
+    "slug": "media-category",
+    "description": "This plugin helps administrators of the site categorize their wordpress media.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/media-category/",
+    "icon": "fa fa-2x fa-file-image-o"
+  },
+  {
+    "name": "Woo Price Quotes",
+    "slug": "woo-price-quote-inquiry",
+    "description": "This plugin helps in quoting the products that admin wishes to hide its purchasing details.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/woo-price-quote-inquiry/",
+    "icon": "fa fa-2x fa-usd"
+  },
+  {
+    "name": "EDD Service Extended",
+    "slug": "edd-service-extended",
+    "description": "This plugin helps administrators of the site categorize their wordpress media.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/edd-service-extended/",
+    "icon": "fa fa-2x fa-product-hunt"
+  },
+  {
+    "name": "WB Ads Rotator with Split Test",
+    "slug": "wb-ads-rotator-with-split-test",
+    "description": "This plugin is designed for the SPLIT TESTING, you can check performance of your ads layout and on the basis of them you can select one of them for your regular use.",
+    "type": "free",
+    "wp_url": "https://wordpress.org/plugins/wb-ads-rotator-with-split-test/",
+    "icon": "fa fa-2x fa-adn"
+  },
+  {
+    "name": "BuddyPress Moderation Pro",
+    "description": "BuddyPress Community Moderation offers a solution for site owners to keep their communities straight. With community policing strategy, members of the community have an option for moderation sitewide by attaching flags to content created within the various components.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-moderation-pro/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-exclamation-triangle"
+  },
+  {
+    "name": "BuddyPress Polls",
+    "description": "Use BuddyPress Polls plugin to create polls inside the activity, let your user response to your polls. Members can create pools like activities, easily votes on them.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-polls/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-comments-o"
+  },
+  {
+    "name": "BuddyPress Resume Manager",
+    "description": "BuddyPress Resume Manager adds a separate BuddyPress Resume menu at a user’s BuddyPress Profile Page to display individual member resume. We have added predefined fields for the resumes and site admin and enable and disable them.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-resume-manager/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-file"
+  },
+  {
+    "name": "BuddyPress Profanity",
+    "description": "Use BuddyPress Profanity plugin to censor content in your community! Easily Censor all the unwanted words in activities, private messages contents by specifying a list of keywords to be filtered.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-profanity/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-flag"
+  },
+  {
+    "name": "BuddyPress Private Community Pro",
+    "description": "This plugin offers a lockdown for BuddyPress Component and will ask users to log in go further to check profile or any other protected details.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-private-community-pro/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-lock"
+  },
+  {
+    "name": "BuddyPress Profile Pro",
+    "description": "This plugin gives you the power to extend BuddyPress Profiles with repeater fields and groups. You can easily add multiple field groups and display them at member’s profile.",
+    "download_url": "https://wbcomdesigns.com/downloads/buddypress-profile-pro/",
+    "type": "paid",
+    "icon": "fa fa-2x fa-user-circle"
+  }
+]

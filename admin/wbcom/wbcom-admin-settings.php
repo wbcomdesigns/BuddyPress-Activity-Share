@@ -52,7 +52,7 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 
 				if ( isset( $response_wb_json_request_head['response']['code'] ) && ( $response_wb_json_request_head['response']['code'] == 200 ) ) {
 					$response_promotions = isset( $response_wb_json_request['body'] ) ? $response_wb_json_request['body'] : '';
-				}				
+				}	
 			}
 
 			if ( empty( $response_promotions ) ) {
