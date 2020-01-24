@@ -153,3 +153,37 @@ function bpshare_same_network_config() {
 	. esc_html__( 'BuddyPress Activity Social Share and BuddyPress need to share the same network configuration.', 'buddypress-share' )
 	. '</p></div>';
 }
+
+/**
+ *  Check if buddypress activate.
+ */
+function bpshare_requires_buddypress()
+{
+
+    if ( !class_exists( 'Buddypress' ) ) {
+        deactivate_plugins( plugin_basename( __FILE__ ) );
+        //deactivate_plugins('buddypress-polls/buddypress-polls.php');
+        add_action( 'admin_notices', 'bpshare_required_plugin_admin_notice' );
+        unset($_GET['activate']);
+    }
+}
+
+add_action( 'admin_init', 'bpshare_requires_buddypress' );
+/**
+ * Throw an Alert to tell the Admin why it didn't activate.
+ *
+ * @author wbcomdesigns
+ * @since  2.2.2
+ */
+function bpshare_required_plugin_admin_notice()
+{
+
+    $bpquotes_plugin          = esc_html__('BuddyPress Activity Social Share', 'buddypress-share');
+    $bp_plugin                = esc_html__('BuddyPress', 'buddypress-share');
+    echo '<div class="error"><p>';
+    echo sprintf(esc_html__('%1$s is ineffective now as it requires %2$s to be installed and active.', 'buddypress-share'), '<strong>' . esc_html($bpquotes_plugin) . '</strong>', '<strong>' . esc_html($bp_plugin) . '</strong>');
+    echo '</p></div>';
+    if (isset($_GET['activate']) ) {
+        unset($_GET['activate']);
+    }
+}
