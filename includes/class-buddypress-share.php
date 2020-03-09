@@ -64,13 +64,14 @@ class Buddypress_Share {
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
+	 *
 	 * @access public
 	 * @since    1.0.0
 	 */
 	public function __construct() {
 
-		$this->plugin_name		 = 'buddypress-share';
-		$this->version			 = '2.0.0';
+		$this->plugin_name = 'buddypress-share';
+		$this->version     = '2.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -114,6 +115,12 @@ class Buddypress_Share {
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-buddypress-share-admin.php';
+
+		/**
+		 * The class responsible for display admin notice for revirew after 7 days.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-buddypress-share-feedback.php';
+
 		/**
 		 * The class responsible for defining custom settings
 		 * of the plugin.
@@ -152,8 +159,8 @@ class Buddypress_Share {
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin		 = new Buddypress_Share_Admin( $this->get_plugin_name(), $this->get_version() );
-		$plugin_admin_page	 = new Buddypress_Share_Options_Page( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin      = new Buddypress_Share_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin_page = new Buddypress_Share_Options_Page( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -189,6 +196,7 @@ class Buddypress_Share {
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
+	 *
 	 * @access public
 	 * @since    1.0.0
 	 */
