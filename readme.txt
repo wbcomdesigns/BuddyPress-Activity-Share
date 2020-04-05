@@ -76,12 +76,15 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 == Changelog ==
 
+= 2.4.0 =
+* Fix - Added admin notice for review
+
 = 2.3.0 =
 * Fix - update BuddyPress activation condition
 
 = 2.2.1 =
 * Fix - Removed Google+ Option as this is no more working. #39
-* Fix - Nouveau - improved UI of share button. #49 
+* Fix - Nouveau - improved UI of share button. #49
 
 = 2.2.0 =
 * Fix - Removed font-awesome 5.0 #37
