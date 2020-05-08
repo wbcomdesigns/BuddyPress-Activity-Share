@@ -270,6 +270,21 @@ class Buddypress_Share_Public {
 				<meta property="og:description" content="<?php echo $activity_content; ?>" />
 				<?php if ( $enable_user_avatar ) {
 					$og_image = $avatar_url;
+				} else {
+					global $wpdb;
+					 $table_name    = $wpdb->prefix . 'bp_media';
+					 $attachment_id = $activity_id = array();
+					if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
+						$attachments = $wpdb->get_results( "SELECT * FROM $table_name ", ARRAY_A );
+						foreach ( $attachments as $attachment ) {
+							$attachment_id[] = $attachment['attachment_id'];
+							$activity_id[]   = $attachment['activity_id'];
+							$is_attachemnt   = bp_activity_get_meta( $activity_id[0], 'bp_media_activity', true );
+							if ( true === (bool) $is_attachemnt ) {
+								$og_image = wp_get_attachment_url( $attachment_id[0] );
+							}
+						}
+					}
 				}
 				?>
 				<meta property="og:image" content="<?php echo $og_image; ?>" />
