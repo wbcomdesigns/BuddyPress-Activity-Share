@@ -250,41 +250,40 @@ class Buddypress_Share_Public {
 				preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $matches[0][0], $matches2 );
 				if ( isset( $matches2[1][0] ) ) {
 					$first_img_src = $matches2[1][0];
+			//		echo $first_img_src;
 				}
 			}
 
 			$avatar_url = get_avatar_url( $activity_obj->user_id, array( 'size' => 300 ) );
 
-			if ( ! empty( $first_img_src ) ) {
-				$og_image = $first_img_src;
-			} elseif ( class_exists( 'BP_Media' ) ) {
-				global $wpdb;
-				 $table_name    = $wpdb->base_prefix . 'bp_media';
-				 $attachment_id = $activity_id = array();
-				if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
-					$attachments = $wpdb->get_results( "SELECT * FROM $table_name ", ARRAY_A );
-					foreach ( $attachments as $attachment ) {
-						$attachment_id[] = $attachment['attachment_id'];
-						$activity_id[]   = $attachment['activity_id'];
-						$is_attachemnt   = bp_activity_get_meta( $activity_id[0], 'bp_media_activity', true );
-						if ( true === (bool) $is_attachemnt ) {
-							$og_image = wp_get_attachment_url( $attachment_id[0] );
-						}
-					}
+			$og_image ='';
+
+			if ( class_exists( 'BP_Media' ) ) {
+				$media_ids = bp_activity_get_meta( $activity_obj->id, 'bp_media_ids',true );
+				$media_ids = explode( ',', $media_ids );
+
+				if ( ! empty( $media_ids[0] ) ) {
+					$media_data     = new BP_Media( $media_ids[0] );
+					$og_image = esc_attr( wp_get_attachment_image_url( $media_data->attachment_id ,'full') );
 				}
-			} elseif ( $enable_user_avatar ) {
-				$og_image = $avatar_url;
-			} else {
-				$og_image = '';
 			}
 
 			$activity_content   = wp_strip_all_tags( $activity_content );
 			$activity_content   = stripslashes( $activity_content );
 			$extra_options      = get_site_option( 'bp_share_services_extra' );
 			$enable_user_avatar = false;
-			if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
-				if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
-					$enable_user_avatar = true;
+
+				if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
+					if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
+						$enable_user_avatar = true;
+					}
+				}
+				if ( empty( $og_image ) && $enable_user_avatar )
+				{
+					$og_image = $avatar_url;
+				}
+				if ( ! empty( $first_img_src ) ) {
+					$og_image = $first_img_src;
 				}
 			}
 			?>
@@ -292,34 +291,11 @@ class Buddypress_Share_Public {
 				<meta property="og:url"    content="<?php echo esc_url( $activity_permalink ); ?>" />
 				<meta property="og:title"  content="<?php echo $title; ?>" />
 				<meta property="og:description" content="<?php echo $activity_content; ?>" />
-				<?php
-				if ( $enable_user_avatar ) {
-					$og_image = $avatar_url;
-				} else {
-					global $wpdb;
-					 $table_name    = $wpdb->prefix . 'bp_media';
-					 $attachment_id = $activity_id = array();
-					if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
-						$attachments = $wpdb->get_results( "SELECT * FROM $table_name ", ARRAY_A );
-						foreach ( $attachments as $attachment ) {
-							$attachment_id[] = $attachment['attachment_id'];
-							$activity_id[]   = $attachment['activity_id'];
-							$is_attachemnt   = bp_activity_get_meta( $activity_id[0], 'bp_media_activity', true );
-							if ( true === (bool) $is_attachemnt ) {
-								$og_image = wp_get_attachment_url( $attachment_id[0] );
-							}
-						}
-					}
-				}
-				?>
 				<meta property="og:image" content="<?php echo $og_image; ?>" />
 				<meta property="og:image:secure_url" content="<?php echo $og_image; ?>" />
 				<meta property="og:image:width" content="400" />
 				<meta property="og:image:height" content="300" />
 			<?php
-		} else {
-			return;
 		}
-	}
 
 }
