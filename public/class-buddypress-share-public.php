@@ -204,10 +204,13 @@ class Buddypress_Share_Public {
 	public function bp_share_opengraph() {
 		global $bp, $post;
 		if ( ( bp_is_active( 'activity' ) && bp_is_current_component( 'activity' ) && ! empty( $bp->current_action ) && is_numeric( $bp->current_action ) && bp_is_single_activity() ) ) {
-			$activity_img       = '';
+			$activity_img       = null;
 			$activity_assets    = array();
-			$activity_content   = '';
-			$first_img_src      = '';
+			$activity_content   = null;
+			$first_img_src      = null;
+			$title				= null;
+			$og_image			= null;
+			$activity_permalink	= null;
 			$activity_obj       = new BP_Activity_Activity( $bp->current_action );
 			$activity_permalink = bp_activity_get_permalink( $bp->current_action );
 			preg_match_all( '/(src|width|height)=("[^"]*")/', $activity_obj->content, $result );
@@ -274,7 +277,6 @@ class Buddypress_Share_Public {
 				if ( ! empty( $first_img_src ) ) {
 					$og_image = $first_img_src;
 				}
-			}
 			?>
 				<meta property="og:type"   content="article" />
 				<meta property="og:url"    content="<?php echo esc_url( $activity_permalink ); ?>" />
@@ -284,7 +286,8 @@ class Buddypress_Share_Public {
 				<meta property="og:image:secure_url" content="<?php echo $og_image; ?>" />
 				<meta property="og:image:width" content="400" />
 				<meta property="og:image:height" content="300" />
-			<?php
-		}
-
+			<?php } else {
+				return;
+			}
+	}
 }
