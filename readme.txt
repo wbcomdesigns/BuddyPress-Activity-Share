@@ -22,7 +22,6 @@ A perfect plugin to make your user activities on your website social-share-frien
 
 **If you like the plugin functionality, please, leave a review to help the plugin grow!**
 
-
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -46,6 +45,12 @@ If you need additional help you can contact us for [Custom Development](https://
 = Is this plugin requires another plugin? =
 Yes, this plugin requires BuddyPress plugin.
 
+= Is it comaptiable with BuddyBoss Platform? =
+Yes, it will consider bb-media files for og-images.
+
+= Is it comaptiable with rtMedia? =
+Yes, it works for rtmedia media activities and attached media are used for og-images.
+
 = How to add social service? =
 In plugin general setting tab, you can see settings Add Social Services. Here you can add new service.
 
@@ -67,13 +72,17 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 == Screenshots ==
 
-1. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(png|jpg|jpeg|gif).
+1. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-1.(jpg|jpeg|gif).
 
-2. BuddyPress Activity Social Share admin setting page View : It is the screen that shows admin settings at BuddyPress Activity Social Share under General tab and corresponds to screenshot-1.(png|jpg|jpeg|gif).
+2. BuddyPress Activity Social Share admin setting page View : It is the screen that shows admin settings at BuddyPress Activity Social Share under General tab and corresponds to screenshot-2.(png|jpg|jpeg|gif).
 
-3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-2.(png|jpg|jpeg|gif).
+3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(jpg|jpeg|gif).
 
 == Changelog ==
+
+= 2.5.0 =
+* Enhancement - Added support for BuddyBoss Platform
+* Fix - Removed default fallback to avatars
 
 = 2.4.0 =
 * Fix - Added admin notice for review
