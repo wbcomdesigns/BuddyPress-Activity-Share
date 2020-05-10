@@ -4,7 +4,7 @@ Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
-Tested up to: 5.3.2
+Tested up to: 5.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,13 +13,17 @@ Free WordPress plugin to allow anyone easily share BuddyPress Activites on major
 
 == Description ==
 
-Free WordPress plugin to allow anyone easily share BuddyPress Activites on major social media (Facebook, Twitter, Linkedin ).
+BuddyPress Activity Social Share allows users to share activities to their social networking profiles.
 
 A perfect plugin to make your user activities on your website social-share-friendly, and increase your members social reach dramatically!
 
-* [Plugin Homepage](https://wbcomdesigns.com/downloads/buddypress-activity-social-share/)
+[Live demo >](https://bb-free.buddyxtheme.com/)
+[Additional Details >](https://wbcomdesigns.com/downloads/buddypress-activity-social-share/)
 
-* [FAQ](https://support.wbcomdesigns.com/portal/kb/wbcom-plugins/buddypress-activity-social-share)
+**If you like the plugin functionality, please, leave a review to help the plugin grow!**
+
+[Free version live demo >](https://plugins.yithemes.com/yith-woocommerce-wishlist-free/)
+[Documentation >](https://docs.yithemes.com/yith-woocommerce-wishlist)
 
 
 == Installation ==
@@ -66,13 +70,11 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 == Screenshots ==
 
-1. BuddyPress Activity Social Share admin setting page View : It is the screen that shows admin settings at BuddyPress Activity Social Share under General tab and corresponds to screenshot-1.(png|jpg|jpeg|gif).
+1. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(png|jpg|jpeg|gif).
 
-2. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-2.(png|jpg|jpeg|gif).
+2. BuddyPress Activity Social Share admin setting page View : It is the screen that shows admin settings at BuddyPress Activity Social Share under General tab and corresponds to screenshot-1.(png|jpg|jpeg|gif).
 
-3. The screenshot shows Social Share button & services for logged-in users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(png|jpg|jpeg|gif).
-
-4. The screenshot shows Social Share button & services for logged-out users added by plugin related to BuddyPress Activity Social Share plugin and corresponds to screenshot-4.(png|jpg|jpeg|gif).
+3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-2.(png|jpg|jpeg|gif).
 
 == Changelog ==
 
