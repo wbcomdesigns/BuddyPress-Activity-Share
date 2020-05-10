@@ -184,22 +184,6 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 					'icon'			 => 'fa fa-upload'
 				),
 				'1'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Activity Filter', 'buddypress-share' ),
-					'slug'			 => 'bp-activity-filter',
-					'description'	 => esc_html__( 'Admin can set default and customised activities to be listed on front-end.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-activity-filter' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-activity-filter/',
-					'icon'			 => 'fa fa-filter'
-				),
-				'2'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Activity Social Share', 'buddypress-share' ),
-					'slug'			 => 'bp-activity-social-share',
-					'description'	 => esc_html__( 'This plugin allows anyone easily share BuddyPress Activites on major social media (Facebook, Twitter, Google+, Linkedin ).', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-activity-social-share' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-activity-social-share/',
-					'icon'			 => 'fa fa-share-alt'
-				),
-				'3'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Create Group Type', 'buddypress-share' ),
 					'slug'			 => 'bp-create-group-type',
 					'description'	 => esc_html__( 'It will help to create group type for BuddyPress Groups.', 'buddypress-share' ),
@@ -207,7 +191,7 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 					'wp_url'		 => 'https://wordpress.org/plugins/bp-create-group-type/',
 					'icon'			 => 'fa fa-sitemap'
 				),
-				'4'	 => array(
+				'2'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Member Reviews', 'buddypress-share' ),
 					'slug'			 => 'bp-user-profile-reviews',
 					'description'	 => esc_html__( 'This plugin allows only site members to add reviews to the buddypress members on the site and even rate the member’s profile out of 5 points with multiple review criteria.', 'buddypress-share' ),
@@ -215,141 +199,13 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 					'wp_url'		 => 'https://wordpress.org/plugins/bp-user-profile-reviews/',
 					'icon'			 => 'fa fa-user'
 				),
-				'5'	 => array(
+				'3'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Group Reviews', 'buddypress-share' ),
 					'slug'			 => 'review-buddypress-groups',
 					'description'	 => esc_html__( 'This plugin allows the BuddyPress Members to give reviews to the BuddyPress groups on the site. The review form allows the users to give text review, even rate the group on the basis of multiple criterias.', 'buddypress-share' ),
 					'status'		 => $this->wbcom_plugin_status( 'review-buddypress-groups' ),
 					'wp_url'		 => 'https://wordpress.org/plugins/review-buddypress-groups/',
 					'icon'			 => 'fa fa-2x fa-users'
-				),
-				'6'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Favorite Notification', 'buddypress-share' ),
-					'slug'			 => 'bp-favorite-notification',
-					'description'	 => esc_html__( 'BuddyPress Favorite Notification adds a notification for BuddyPress activity.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-favorite-notification' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-favorite-notification/',
-					'icon'			 => 'fa fa-2x fa-bell'
-				),
-				'7'	 => array(
-					'name'			 => esc_html__( 'Custom Email Options', 'buddypress-share' ),
-					'slug'			 => 'custom-email-options',
-					'description'	 => esc_html__( 'Override default email options of Worpdress.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'custom-email-options' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/custom-email-options/',
-					'icon'			 => 'fa fa-2x fa-at'
-				),
-				'8'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Checkins', 'buddypress-share' ),
-					'slug'			 => 'bp-check-in',
-					'description'	 => esc_html__( 'This plugin allows BuddyPress members to share their location when they are posting activities, you can add places where you visited, nearby locations based on google places.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-check-in' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-check-in/',
-					'icon'			 => 'fa fa-2x fa fa-map-marker'
-				),
-				'9'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Job Manager', 'buddypress-share' ),
-					'slug'			 => 'bp-job-manager',
-					'description'	 => esc_html__( 'Incorporates BuddyPress with the WP Job Manager plugin by creating specific tabs in employer’s and candidate’s profiles.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-job-manager' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-job-manager/',
-					'icon'			 => 'fa fa-2x fa-briefcase'
-				),
-				'10' => array(
-					'name'			 => esc_html__( 'BuddyPress user ToDo List', 'buddypress-share' ),
-					'slug'			 => 'bp-user-to-do-list',
-					'description'	 => esc_html__( 'This plugin allows you to create your personal task list with timestamp. You can mark them complete when you are done with them. It will also send reminder when you have any overdue task.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-user-to-do-list' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-user-to-do-list/',
-					'icon'			 => 'fa fa-2x fa-list-ol'
-				),
-				'11' => array(
-					'name'			 => esc_html__( 'Shortcodes for BuddyPress', 'buddypress-share' ),
-					'slug'			 => 'shortcodes-for-buddypress',
-					'description'	 => esc_html__( 'This plugin will add an extended feature to the big name “BuddyPress” that will generate Shortcode for Listing Activity Streams , Members and Groups on any post/page in website.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'shortcodes-for-buddypress' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/shortcodes-for-buddypress/',
-					'icon'			 => 'fa fa-2x fa-code'
-				),
-				'12' => array(
-					'name'			 => esc_html__( 'Woo Open Graph', 'buddypress-share' ),
-					'slug'			 => 'woo-open-graph',
-					'description'	 => esc_html__( 'This plugin will add an extended feature to the big name “WooCommerce” that will adds well executed and accurate Open Graph Meta Tags to your site with title,description and WooCommerce featured image.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'woo-open-graph' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/woo-open-graph/',
-					'icon'			 => 'fa fa-bar-chart'
-				),
-				'13' => array(
-					'name'			 => esc_html__( 'BuddyPress Lock', 'buddypress-share' ),
-					'slug'			 => 'lock-my-bp',
-					'description'	 => esc_html__( 'This plugin allows the administrator to lock the certain parts of their site. It help to create private BuddyPress community by locking certain BuddyPress Components, WordPress Pages, Custom Post Types for public view without using any membership plugin.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'lock-my-bp' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/lock-my-bp/',
-					'icon'			 => 'fa fa-2x fa-lock'
-				),
-				'14' => array(
-					'name'			 => esc_html__( 'Woo Audio Preview', 'buddypress-share' ),
-					'slug'			 => 'woo-audio-preview',
-					'description'	 => esc_html__( 'This plugin Allows playing the audio files in sample mode to prevent unauthorized downloading of the audio files. It helps to display sample files at single product page.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'woo-audio-preview' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/woo-audio-preview/',
-					'icon'			 => 'fa fa-2x fa-volume-up'
-				),
-				'15' => array(
-					'name'			 => esc_html__( 'WordPress System Log', 'buddypress-share' ),
-					'slug'			 => 'wp-system-log',
-					'description'	 => esc_html__( 'This plugin helps administrators of the site see their environment on which the site is currently running that includes WordPress environment, tha database it requires, Server Environment and the plugins installed and activated on the site.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'wp-system-log' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/wp-system-log/',
-					'icon'			 => 'fa fa-file-text'
-				),
-				'16' => array(
-					'name'			 => esc_html__( 'BP Post From Anywhere', 'buddypress-share' ),
-					'slug'			 => 'bp-post-from-anywhere',
-					'description'	 => esc_html__( 'This plugin will generate shortcode and widgets for post updates section for activities so you can post update from anywhere, it might be sidebar, some page or any template file.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'bp-post-from-anywhere' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/bp-post-from-anywhere/',
-					'icon'			 => 'fa fa-2x fa-edit'
-				),
-				'17' => array(
-					'name'			 => esc_html__( 'Woo Document Preview', 'buddypress-share' ),
-					'slug'			 => 'woo-document-preview',
-					'description'	 => esc_html__( 'This will allow you to add document preview at single product page. Which helps to offer more better idea when you are selling ebooks, pdf or some documents.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'woo-document-preview' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/woo-document-preview/',
-					'icon'			 => 'fa fa-2x fa-file'
-				),
-				'18' => array(
-					'name'			 => esc_html__( 'WordPress Media Category', 'buddypress-share' ),
-					'slug'			 => 'media-category',
-					'description'	 => esc_html__( 'This plugin helps administrators of the site categorize their wordpress media.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'media-category' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/media-category/',
-					'icon'			 => 'fa fa-picture-o'
-				),
-				'19' => array(
-					'name'			 => esc_html__( 'Woo Price Quotes', 'buddypress-share' ),
-					'slug'			 => 'woo-price-quote-inquiry',
-					'description'	 => esc_html__( 'This plugin helps in quoting the products that admin wishes to hide its purchasing details.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'woo-price-quote-inquiry' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/woo-price-quote-inquiry/',
-					'icon'			 => 'fa fa-usd'
-				),
-				'20' => array(
-					'name'			 => esc_html__( 'EDD Service Extended', 'buddypress-share' ),
-					'slug'			 => 'edd-service-extended',
-					'description'	 => esc_html__( 'This plugin helps administrators of the site categorize their wordpress media.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'edd-service-extended' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/edd-service-extended/',
-					'icon'			 => 'fa fa-2x fa-product-hunt'
-				),
-				'21' => array(
-					'name'			 => esc_html__( 'WB Ads Rotator with Split Test', 'buddypress-share' ),
-					'slug'			 => 'wb-ads-rotator-with-split-test',
-					'description'	 => esc_html__( 'This plugin is designed for the SPLIT TESTING, you can check performance of your ads layout and on the basis of them you can select one of them for your regular use.', 'buddypress-share' ),
-					'status'		 => $this->wbcom_plugin_status( 'wb-ads-rotator-with-split-test' ),
-					'wp_url'		 => 'https://wordpress.org/plugins/wb-ads-rotator-with-split-test/',
-					'icon'			 => 'fa fa-adn'
 				)
 			);
 			return $free_plugins;
@@ -366,38 +222,56 @@ if ( !class_exists( 'Wbcom_Admin_Settings' ) ) {
 				'0'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Moderation Pro', 'buddypress-share' ),
 					'description'	 => esc_html__( 'BuddyPress Community Moderation offers a solution for site owners to keep their communities straight. With community policing strategy, members of the community have an option for moderation sitewide by attaching flags to content created within the various components.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-moderation-pro/',
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-moderation-pro/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
 					'icon'			 => 'fa fa-exclamation-triangle'
 				),
 				'1'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Polls', 'buddypress-share' ),
 					'description'	 => esc_html__( 'Use BuddyPress Polls plugin to create polls inside the activity, let your user response to your polls. Members can create pools like activities, easily votes on them.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-polls/',
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-polls/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
 					'icon'			 => 'fa fa-bar-chart'
 				),
 				'2'	 => array(
-					'name'			 => esc_html__( 'BuddyPress Resume Manager', 'buddypress-share' ),
-					'description'	 => esc_html__( 'BuddyPress Resume Manager adds a separate BuddyPress Resume menu at a user’s BuddyPress Profile Page to display individual member resume. We have added predefined fields for the resumes and site admin and enable and disable them.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-resume-manager/',
-					'icon'			 => 'fa fa-file'
+					'name'			 => esc_html__( 'BuddyPress Hashtags', 'buddypress-share' ),
+					'description'	 => esc_html__( 'Allows members to use hashtags in BuddyPress activities and bbPress topics and ready with widgets.', 'buddypress-share' ),
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-hashtags/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
+					'icon'			 => 'fa fa-hashtag'
 				),
 				'3'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Profanity', 'buddypress-share' ),
 					'description'	 => esc_html__( 'Use BuddyPress Profanity plugin to censor content in your community! Easily Censor all the unwanted words in activities, private messages contents by specifying a list of keywords to be filtered.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-profanity/',
-					'icon'			 => 'fa fa-hand-peace-o'
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-profanity/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
+					'icon'			 => 'fa fa-ban'
 				),
 				'4'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Private Community Pro', 'buddypress-share' ),
 					'description'	 => esc_html__( 'This plugin offers a lockdown for BuddyPress Component and will ask users to log in go further to check profile or any other protected details.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-private-community-pro/',
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-private-community-pro/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
 					'icon'			 => 'fa fa-user-times'
 				),
 				'5'	 => array(
 					'name'			 => esc_html__( 'BuddyPress Profile Pro', 'buddypress-share' ),
 					'description'	 => esc_html__( 'This plugin gives you the power to extend BuddyPress Profiles with repeater fields and groups. You can easily add multiple field groups and display them at member’s profile.', 'buddypress-share' ),
-					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-profile-pro/',
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-profile-pro/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
 					'icon'			 => 'fa fa-user-circle-o'
+				),
+				'6'	 => array(
+					'name'			 => esc_html__( 'BuddyPress Sticky Post', 'buddypress-share' ),
+					'description'	 => esc_html__( 'This will make it easier for the site administrator to make the pinned activity item recognized first by the community whenever they visit the site.', 'buddypress-share' ),
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-sticky-post/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
+					'icon'			 => 'fa fa-thumb-tack'
+				),
+				'7'	 => array(
+					'name'			 => esc_html__( 'BuddyPress Auto Friends', 'buddypress-share' ),
+					'description'	 => esc_html__( 'Allow the site admin to select global friends for all his members with BuddyPress Auto friends plugin.', 'buddypress-share' ),
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-auto-friends/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
+					'icon'			 => 'fa fa-user-plus'
+				),
+				'8'	 => array(
+					'name'			 => esc_html__( 'BuddyPress Quotes', 'buddypress-share' ),
+					'description'	 => esc_html__( 'BuddyPress quotes plugin comes with the feature to let users post their activity updates with interactive backgrounds selection such as colors and images set by the site administrator, so they can tell a more expressive story.', 'buddypress-share' ),
+					'download_url'	 => 'https://wbcomdesigns.com/downloads/buddypress-quotes/?utm_source=wporg&utm_medium=plugins&utm_campaign=bp',
+					'icon'			 => 'fa fa-quote-left'
 				),
 			);
 			return $paid_plugins;
