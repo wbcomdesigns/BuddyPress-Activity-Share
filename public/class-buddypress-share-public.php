@@ -257,6 +257,15 @@ class Buddypress_Share_Public {
 			$avatar_url = get_avatar_url( $activity_obj->user_id, array( 'size' => 300 ) );
 
 			$og_image ='';
+			if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
+				if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
+					$enable_user_avatar = true;
+				}
+			}
+			if ( empty( $og_image ) && $enable_user_avatar )
+			{
+				$og_image = $avatar_url;
+			}
 
 			if ( class_exists( 'BP_Media' ) ) {
 				$media_ids = bp_activity_get_meta( $activity_obj->id, 'bp_media_ids',true );
@@ -273,15 +282,6 @@ class Buddypress_Share_Public {
 			$extra_options      = get_site_option( 'bp_share_services_extra' );
 			$enable_user_avatar = false;
 
-				if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
-					if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
-						$enable_user_avatar = true;
-					}
-				}
-				if ( empty( $og_image ) && $enable_user_avatar )
-				{
-					$og_image = $avatar_url;
-				}
 				if ( ! empty( $first_img_src ) ) {
 					$og_image = $first_img_src;
 				}
