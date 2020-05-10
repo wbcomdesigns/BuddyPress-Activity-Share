@@ -82,9 +82,6 @@ class Buddypress_Share_Options_Page {
         add_settings_field(
                 'bp_share_services_open', esc_html__('Open as popup window', 'buddypress-share' ), array( $this, 'bp_share_checkbox_open_services_render' ), 'bp_share_services_extra', 'bp_share_extra_options'
         );
-        add_settings_field(
-                'bp_share_avatar_open_graph', esc_html__('Use avatar as open graph image', 'buddypress-share' ), array( $this, 'bp_share_checkbox_avatar_opengraph_render' ), 'bp_share_services_extra', 'bp_share_extra_options'
-        );
     }
 
     /**
@@ -101,18 +98,6 @@ class Buddypress_Share_Options_Page {
         <?php
     }
 
-    public function bp_share_checkbox_avatar_opengraph_render() {
-    	$extra_options = get_site_option('bp_share_services_extra');
-    	$avatar_enable = 0;
-    	if ( isset( $extra_options['bp_share_avatar_open_graph'] ) ) {
-    		if ( $extra_options['bp_share_avatar_open_graph'] == 1 ) {
-    			$avatar_enable = 1;    			
-    		}
-    	}
-        ?>
-        <input type='checkbox' name='bp_share_avatar_open_graph' <?php if ( $avatar_enable == 1 ) { echo 'checked="checked"'; } ?> value='1'>
-        <?php
-    }
 
     /**
      * Intialize bp_share_settings_section_callback.
@@ -184,7 +169,7 @@ class Buddypress_Share_Options_Page {
 
     public function bpas_general_setting_section() { ?>
     	<div class="wbcom-tab-content">
-    		<form method="post" action="<?php echo admin_url('options.php'); ?>" id="bp_share_form"> 
+    		<form method="post" action="<?php echo admin_url('options.php'); ?>" id="bp_share_form">
                 <?php wp_nonce_field('update-options'); ?>
                     <h3><?php esc_html_e( 'Add Social Services', 'buddypress-share' ); ?></h3>
                     <table cellspacing="0" class="add_share_services widefat fixed plugins">
@@ -497,12 +482,8 @@ class Buddypress_Share_Options_Page {
                 if ( in_array( 'bp_share_services_open', $extras_options ) ) {
                     $extra_option_new['bp_share_services_open'] = 1;
                 }
-                if ( in_array( 'bp_share_avatar_open_graph', $extras_options ) ) {
-                    $extra_option_new['bp_share_avatar_open_graph'] = 1;
-                }
             } else {
                 $extra_option_new['bp_share_services_open'] = 0;
-                $extra_option_new['bp_share_avatar_open_graph'] = 0;
             }
             update_site_option( 'bp_share_services_extra', $extra_option_new );
             $services = get_site_option('bp_share_services');

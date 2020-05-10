@@ -254,8 +254,6 @@ class Buddypress_Share_Public {
 				}
 			}
 
-			$avatar_url = get_avatar_url( $activity_obj->user_id, array( 'size' => 300 ) );
-
 			$og_image ='';
 
 			if ( class_exists( 'BP_Media' ) ) {
