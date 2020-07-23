@@ -79,3 +79,7 @@ a.bp-share.has-popup {
     font-size: 0;
     vertical-align: middle;
 }
+
+.tooltip-hide {
+    display: none;
+}

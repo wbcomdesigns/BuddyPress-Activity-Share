@@ -93,6 +93,18 @@ class Buddypress_Share_Activator {
 
 						),
 
+						'bp_share_whatsapp' => array(
+
+							'chb_bp_share_whatsapp' => 1,
+
+							'service_name'          => esc_html__( 'Whatsapp', 'buddypress-share' ),
+
+							'service_icon'          => 'fa fa-whatsapp',
+
+							'service_description'   => esc_html__( 'WhatsApp Messenger, or simply WhatsApp, is an American freeware, cross-platform messaging and Voice over IP (VoIP) service owned by Facebook, Inc.', 'buddypress-share' ),
+
+						),
+
 						// "bp_share_google_plus" => array(
 
 						// "chb_bp_share_google_plus" => 1,
@@ -147,6 +159,13 @@ class Buddypress_Share_Activator {
 
 					);
 
+					$whatsapp = array(
+						'chb_bp_share_whatsapp' => 1,
+						'service_name'          => esc_html__( 'Whatsapp', 'buddypress-share' ),
+						'service_icon'          => 'fa fa-whatsapp',
+						'service_description'   => esc_html__( 'WhatsApp Messenger, or simply WhatsApp, is an American freeware, cross-platform messaging and Voice over IP (VoIP) service owned by Facebook, Inc.', 'buddypress-share' ),
+					);
+
 					// $google_plus = array(
 
 					// "chb_bp_share_google_plus" => 1,
@@ -166,6 +185,8 @@ class Buddypress_Share_Activator {
 						$services['bp_share_twitter'] = $twitter;
 
 						$services['bp_share_linkedin'] = $linkedin;
+
+						$services['bp_share_whatsapp'] = $whatsapp;
 
 						// $services['bp_share_google_plus'] = $google_plus;
 
@@ -213,6 +234,14 @@ class Buddypress_Share_Activator {
 						'service_description'   => esc_html__( 'LinkedIn is a business and employment-oriented social networking service that operates via websites.', 'buddypress-share' ),
 
 					),
+
+					'bp_share_whatsapp' => array(
+							'chb_bp_share_whatsapp' => 1,
+							'service_name'          => esc_html__( 'Whatsapp', 'buddypress-share' ),
+							'service_icon'          => 'fa fa-whatsapp',
+							'service_description'   => esc_html__( 'WhatsApp Messenger, or simply WhatsApp, is an American freeware, cross-platform messaging and Voice over IP (VoIP) service owned by Facebook, Inc.', 'buddypress-share' ),
+
+						),
 				);
 
 				// The option hasn't been added yet. We'll add it with $autoload set to 'no'.
