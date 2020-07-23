@@ -97,7 +97,10 @@ class Buddypress_Share_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+		wp_enqueue_script( 'jquery-ui-tooltip' );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/buddypress-share-public.js', array( 'jquery' ), $this->version, false );
+		
+
 	}
 
 	/**
@@ -173,7 +176,14 @@ class Buddypress_Share_Public {
 						$email = 'mailto:?subject=' . $activity_link . '&body=Check out this site: ' . $activity_title . '" title="Share by Email';
 						echo '<a class="bp-share" href="' . $email . '" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
 					}
-				}
+					if ( isset( $key ) && $key == 'bp_share_whatsapp' && $value[ 'chb_' . $key ] == 1 ) {						
+						echo '<a target="blank" class="bp-share" href="https://api.whatsapp.com/send?text='. $activity_link . '&image_sharer=1" data-action="share/whatsapp/share" rel="whatsapp"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+					}
+				}	
+				
+				echo '<a class="bp-share bp-cpoy" href="#" data-href="'.$activity_link.'" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="fa fa-copy"></i></span></a>';
+				echo '<span class="tooltiptext tooltip-hide">'.esc_attr__( 'Link Copied!', 'buddypress-share' ).'</span>';
+				
 			} else {
 				esc_html_e( 'Please enable share services!', 'buddypress-share' );
 			}
