@@ -103,8 +103,32 @@ a.bp-share.has-popup {
     color: #EF3E56;
 }
 
-.bp-nouveau .activity-list .activity-item .activity-meta.action .bp-share-button::before {
+.bp-list li .generic-button.bp-share-btn,
+.bp-share-btn {
+    display: inline-block;
+}
+
+.bp-nouveau #buddypress .activity-list .activity-item .activity-meta .bp-share-button {
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.bp-nouveau .activity-list .activity-item .activity-meta .bp-share-button::before {
     content: "\f237";
+    font-family: 'dashicons';
+    font-size: initial;
+    margin-right: 3px;
 }
 
 .bp-nouveau .button.item-button.bp-secondary-action.bp-share-button {

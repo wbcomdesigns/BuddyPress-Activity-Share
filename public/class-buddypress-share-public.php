@@ -139,9 +139,9 @@ class Buddypress_Share_Public {
 			$share_button_text = $updated_text;
 		}
 		?>
-		<span class="bp-share-btn">
+		<div class="bp-share-btn generic-button">
 			<a class="button item-button bp-secondary-action bp-share-button" rel="nofollow"><?php esc_html_e( "$share_button_text", 'buddypress-share' ); ?></a>
-		</span>
+		</div>
 		</div>
 		<div class="service-buttons <?php echo $activity_type; ?>" style="display: none;">
 			<?php
