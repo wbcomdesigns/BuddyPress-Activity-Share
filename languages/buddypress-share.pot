@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 19:53:15+00:00\n"
+"POT-Creation-Date: 2020-11-05 12:01:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -212,14 +212,14 @@ msgstr ""
 #: admin/wbcom/templates/wbcom-themes-page.php:23
 #: admin/wbcom/templates/wbcom-themes-page.php:49
 #: admin/wbcom/templates/wbcom-themes-page.php:73
-#: admin/wbcom/templates/wbcom-themes-page.php:96
+#: admin/wbcom/templates/wbcom-themes-page.php:98
 msgid "Purchase"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:24
 #: admin/wbcom/templates/wbcom-themes-page.php:50
 #: admin/wbcom/templates/wbcom-themes-page.php:74
-#: admin/wbcom/templates/wbcom-themes-page.php:97
+#: admin/wbcom/templates/wbcom-themes-page.php:99
 msgid "Preview"
 msgstr ""
 
@@ -285,27 +285,35 @@ msgid "Automated Mega Menu Support"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:80
-msgid "JobMate"
+msgid "BuddyX"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:88
-msgid "Jobmate Solution"
+msgid "BuddyX Theme"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:90
-msgid "Simple live searching and filtering"
+msgid "Responsive BuddyPress Theme"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:91
-msgid "Unique Job listing Page"
+msgid "Site Ready In One-Click"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:92
-msgid "Awesome Resume list Page"
+msgid "Members and Groups Layout"
 msgstr ""
 
 #: admin/wbcom/templates/wbcom-themes-page.php:93
-msgid "Outstanding all job maanger pagesLayout"
+msgid "WooCommerce Ready"
+msgstr ""
+
+#: admin/wbcom/templates/wbcom-themes-page.php:94
+msgid "Supported Muitiple Plugins"
+msgstr ""
+
+#: admin/wbcom/templates/wbcom-themes-page.php:95
+msgid "Suitable for All Devices"
 msgstr ""
 
 #: admin/wbcom/wbcom-admin-settings.php:179
@@ -481,30 +489,30 @@ msgid "%1$s is ineffective now as it requires %2$s to be installed and active."
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:64
-#: includes/class-buddypress-share-activator.php:118
-#: includes/class-buddypress-share-activator.php:185
+#: includes/class-buddypress-share-activator.php:130
+#: includes/class-buddypress-share-activator.php:206
 #: includes/class-buddypress-share-settings.php:192
 msgid "Facebook"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:68
-#: includes/class-buddypress-share-activator.php:122
-#: includes/class-buddypress-share-activator.php:189
+#: includes/class-buddypress-share-activator.php:134
+#: includes/class-buddypress-share-activator.php:210
 msgid ""
 "Facebook is an American for-profit corporation and online social media and "
 "social networking service based in Menlo Park, California, United States."
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:76
-#: includes/class-buddypress-share-activator.php:130
-#: includes/class-buddypress-share-activator.php:197
+#: includes/class-buddypress-share-activator.php:142
+#: includes/class-buddypress-share-activator.php:218
 #: includes/class-buddypress-share-settings.php:193
 msgid "Twitter"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:80
-#: includes/class-buddypress-share-activator.php:134
-#: includes/class-buddypress-share-activator.php:201
+#: includes/class-buddypress-share-activator.php:146
+#: includes/class-buddypress-share-activator.php:222
 msgid ""
 "Twitter is an online news and social networking service where users post "
 "and read short 140-character messages called 'tweets'. Registered users can "
@@ -512,18 +520,34 @@ msgid ""
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:88
-#: includes/class-buddypress-share-activator.php:142
-#: includes/class-buddypress-share-activator.php:209
+#: includes/class-buddypress-share-activator.php:154
+#: includes/class-buddypress-share-activator.php:230
 #: includes/class-buddypress-share-settings.php:195
 msgid "Linkedin"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:92
-#: includes/class-buddypress-share-activator.php:146
-#: includes/class-buddypress-share-activator.php:213
+#: includes/class-buddypress-share-activator.php:158
+#: includes/class-buddypress-share-activator.php:234
 msgid ""
 "LinkedIn is a business and employment-oriented social networking service "
 "that operates via websites."
+msgstr ""
+
+#: includes/class-buddypress-share-activator.php:100
+#: includes/class-buddypress-share-activator.php:164
+#: includes/class-buddypress-share-activator.php:240
+#: includes/class-buddypress-share-settings.php:200
+msgid "Whatsapp"
+msgstr ""
+
+#: includes/class-buddypress-share-activator.php:104
+#: includes/class-buddypress-share-activator.php:166
+#: includes/class-buddypress-share-activator.php:242
+msgid ""
+"WhatsApp Messenger, or simply WhatsApp, is an American freeware, "
+"cross-platform messaging and Voice over IP (VoIP) service owned by "
+"Facebook, Inc."
 msgstr ""
 
 #: includes/class-buddypress-share-settings.php:64
@@ -577,7 +601,7 @@ msgid "Select Service"
 msgstr ""
 
 #: includes/class-buddypress-share-settings.php:187
-#: includes/class-buddypress-share-settings.php:245
+#: includes/class-buddypress-share-settings.php:246
 msgid "Social Sites"
 msgstr ""
 
@@ -605,37 +629,41 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:202
-#: includes/class-buddypress-share-settings.php:212
-#: includes/class-buddypress-share-settings.php:223
+#: includes/class-buddypress-share-settings.php:203
+#: includes/class-buddypress-share-settings.php:213
+#: includes/class-buddypress-share-settings.php:224
 msgid "This field is required!"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:208
+#: includes/class-buddypress-share-settings.php:209
 msgid "Font Awesome Icon Class"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:219
-#: includes/class-buddypress-share-settings.php:247
+#: includes/class-buddypress-share-settings.php:220
+#: includes/class-buddypress-share-settings.php:248
 msgid "Description"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:232
+#: includes/class-buddypress-share-settings.php:233
 msgid "Add Services"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:248
+#: includes/class-buddypress-share-settings.php:249
 msgid "Action"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:312
+#: includes/class-buddypress-share-settings.php:313
 msgid "Save Changes"
 msgstr ""
 
-#: public/class-buddypress-share-public.php:133
+#: public/class-buddypress-share-public.php:136
 msgid "Share"
 msgstr ""
 
-#: public/class-buddypress-share-public.php:178
+#: public/class-buddypress-share-public.php:185
+msgid "Link Copied!"
+msgstr ""
+
+#: public/class-buddypress-share-public.php:188
 msgid "Please enable share services!"
 msgstr ""
