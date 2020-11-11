@@ -5,16 +5,9 @@
   "license": "GPL-2.0+",
   "description": "Free WordPress plugin to allow anyone easily share BuddyPress Activites on major social media",
   "devDependencies": {
-    "eslint": "^4.15.0",
-    "eslint-plugin-wordpress": "^0.1.0",
     "grunt": "^1.0.4",
-    "grunt-check-dependencies": "~1.0.0",
     "grunt-checktextdomain": "^1.0.1",
-    "grunt-jsvalidate": "~0.2.2",
-    "grunt-stylelint": "^0.8.0",
-    "grunt-wp-i18n": "^1.0.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-wordpress": "^14.0.0"
+    "grunt-wp-i18n": "^1.0.1"
   },
   "engines": {
     "node": ">=6.9.1"
