@@ -99,7 +99,6 @@ class Buddypress_Share_Public {
 		 */
 		wp_enqueue_script( 'jquery-ui-tooltip' );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/buddypress-share-public.js', array( 'jquery' ), $this->version, false );
-		
 
 	}
 
@@ -144,51 +143,53 @@ class Buddypress_Share_Public {
 		</div>
 		</div>
 		<div class="service-buttons <?php echo $activity_type; ?>" style="display: none;">
-			<?php
-			if ( ! empty( $service ) ) {
-				foreach ( $service as $key => $value ) {
-					if ( isset( $key ) && $key == 'bp_share_facebook' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="https://www.facebook.com/sharer/sharer.php?u=' . $activity_link . '" rel="facebook"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_twitter' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="http://twitter.com/share?text=' . $activity_title . '&url=' . $activity_link . '" rel="twitter"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_pinterest' && $value[ 'chb_' . $key ] == 1 ) {
-						$media = '';
-						$video = '';
-						echo '<a target="blank" class="bp-share" href="https://pinterest.com/pin/create/bookmarklet/?media=' . $media . '&url=' . $activity_link . '&is_video=' . $video . '&description=' . $activity_title . '" rel="penetrest"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_linkedin' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="http://www.linkedin.com/shareArticle?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_reddit' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="http://reddit.com/submit?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_wordpress' && $value[ 'chb_' . $key ] == 1 ) {
-						$description = '';
-						$img         = '';
-						echo '<a target="blank" class="bp-share" href="https://wordpress.com/wp-admin/press-this.php?u=' . $activity_link . '&t=' . $activity_title . '&s=' . $description . '&i= ' . $img . ' "><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_pocket' && $value[ 'chb_' . $key ] == 1 ) {
-						echo '<a target="blank" class="bp-share" href="https://getpocket.com/save?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_email' && $value[ 'chb_' . $key ] == 1 ) {
-						$email = 'mailto:?subject=' . $activity_link . '&body=Check out this site: ' . $activity_title . '" title="Share by Email';
-						echo '<a class="bp-share" href="' . $email . '" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-					if ( isset( $key ) && $key == 'bp_share_whatsapp' && $value[ 'chb_' . $key ] == 1 ) {						
-						echo '<a target="blank" class="bp-share" href="https://api.whatsapp.com/send?text='. $activity_link . '&image_sharer=1" data-action="share/whatsapp/share" rel="whatsapp"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
-					}
-				}	
-				
-				echo '<a class="bp-share bp-cpoy" href="#" data-href="'.$activity_link.'" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="fa fa-copy"></i></span></a>';
-				echo '<span class="tooltiptext tooltip-hide">'.esc_attr__( 'Link Copied!', 'buddypress-share' ).'</span>';
-				
-			} else {
-				esc_html_e( 'Please enable share services!', 'buddypress-share' );
+		<?php
+		if ( ! empty( $service ) ) {
+			foreach ( $service as $key => $value ) {
+				if ( isset( $key ) && $key == 'bp_share_facebook' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="https://www.facebook.com/sharer/sharer.php?u=' . $activity_link . '" rel="facebook"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_twitter' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="http://twitter.com/share?text=' . $activity_title . '&url=' . $activity_link . '" rel="twitter"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_pinterest' && $value[ 'chb_' . $key ] == 1 ) {
+					$media = '';
+					$video = '';
+					echo '<a target="blank" class="bp-share" href="https://pinterest.com/pin/create/bookmarklet/?media=' . $media . '&url=' . $activity_link . '&is_video=' . $video . '&description=' . $activity_title . '" rel="penetrest"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_linkedin' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="http://www.linkedin.com/shareArticle?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_reddit' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="http://reddit.com/submit?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_wordpress' && $value[ 'chb_' . $key ] == 1 ) {
+					$description = '';
+					$img         = '';
+					echo '<a target="blank" class="bp-share" href="https://wordpress.com/wp-admin/press-this.php?u=' . $activity_link . '&t=' . $activity_title . '&s=' . $description . '&i= ' . $img . ' "><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_pocket' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="https://getpocket.com/save?url=' . $activity_link . '&title=' . $activity_title . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_email' && $value[ 'chb_' . $key ] == 1 ) {
+					$email = 'mailto:?subject=' . $activity_link . '&body=Check out this site: ' . $activity_title . '" title="Share by Email';
+					echo '<a class="bp-share" href="' . $email . '" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+				if ( isset( $key ) && $key == 'bp_share_whatsapp' && $value[ 'chb_' . $key ] == 1 ) {
+					echo '<a target="blank" class="bp-share" href="https://api.whatsapp.com/send?text=' . $activity_link . '&image_sharer=1" data-action="share/whatsapp/share" rel="whatsapp"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+				}
+
+				if ( isset( $key ) && 'bp_copy_activity' === $key && 1 === $value[ 'chb_' . $key ] ) {
+					echo '<a class="bp-share bp-cpoy" href="#" data-href="' . $activity_link . '" attr-display="no-popup"><span class="fa-stack fa-lg"><i class="fa fa-copy"></i></span></a>';
+					echo '<span class="tooltiptext tooltip-hide">' . esc_attr__( 'Link Copied!', 'buddypress-share' ) . '</span>';
+
+				}
 			}
+		} else {
+			esc_html_e( 'Please enable share services!', 'buddypress-share' );
+		}
 			do_action( 'bp_share_user_services', $services = array(), $activity_link, $activity_title );
-			?>
+		?>
 		</div>
 		<div>
 			<script>
@@ -218,9 +219,9 @@ class Buddypress_Share_Public {
 			$activity_assets    = array();
 			$activity_content   = null;
 			$first_img_src      = null;
-			$title				= null;
-			$og_image			= null;
-			$activity_permalink	= null;
+			$title              = null;
+			$og_image           = null;
+			$activity_permalink = null;
 			$activity_obj       = new BP_Activity_Activity( $bp->current_action );
 			$activity_permalink = bp_activity_get_permalink( $bp->current_action );
 			preg_match_all( '/(src|width|height)=("[^"]*")/', $activity_obj->content, $result );
@@ -263,19 +264,19 @@ class Buddypress_Share_Public {
 				preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $matches[0][0], $matches2 );
 				if ( isset( $matches2[1][0] ) ) {
 					$first_img_src = $matches2[1][0];
-			//		echo $first_img_src;
+					// echo $first_img_src;
 				}
 			}
 
-			$og_image ='';
+			$og_image = '';
 
 			if ( class_exists( 'BP_Media' ) ) {
-				$media_ids = bp_activity_get_meta( $activity_obj->id, 'bp_media_ids',true );
+				$media_ids = bp_activity_get_meta( $activity_obj->id, 'bp_media_ids', true );
 				$media_ids = explode( ',', $media_ids );
 
 				if ( ! empty( $media_ids[0] ) ) {
-					$media_data     = new BP_Media( $media_ids[0] );
-					$og_image = esc_attr( wp_get_attachment_image_url( $media_data->attachment_id ,'full') );
+					$media_data = new BP_Media( $media_ids[0] );
+					$og_image   = esc_attr( wp_get_attachment_image_url( $media_data->attachment_id, 'full' ) );
 				}
 			}
 
@@ -284,9 +285,9 @@ class Buddypress_Share_Public {
 			$extra_options      = get_site_option( 'bp_share_services_extra' );
 			$enable_user_avatar = false;
 
-				if ( ! empty( $first_img_src ) ) {
-					$og_image = $first_img_src;
-				}
+			if ( ! empty( $first_img_src ) ) {
+				$og_image = $first_img_src;
+			}
 			?>
 				<meta property="og:type"   content="article" />
 				<meta property="og:url"    content="<?php echo esc_url( $activity_permalink ); ?>" />
@@ -296,8 +297,9 @@ class Buddypress_Share_Public {
 				<meta property="og:image:secure_url" content="<?php echo $og_image; ?>" />
 				<meta property="og:image:width" content="400" />
 				<meta property="og:image:height" content="300" />
-			<?php } else {
-				return;
-			}
+				<?php
+		} else {
+			return;
+		}
 	}
 }
