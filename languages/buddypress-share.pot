@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-11 18:47:46+00:00\n"
+"POT-Creation-Date: 2020-11-20 20:43:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -489,30 +489,30 @@ msgid "%1$s is ineffective now as it requires %2$s to be installed and active."
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:64
-#: includes/class-buddypress-share-activator.php:130
-#: includes/class-buddypress-share-activator.php:206
-#: includes/class-buddypress-share-settings.php:192
+#: includes/class-buddypress-share-activator.php:142
+#: includes/class-buddypress-share-activator.php:227
+#: includes/class-buddypress-share-settings.php:208
 msgid "Facebook"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:68
-#: includes/class-buddypress-share-activator.php:134
-#: includes/class-buddypress-share-activator.php:210
+#: includes/class-buddypress-share-activator.php:146
+#: includes/class-buddypress-share-activator.php:231
 msgid ""
 "Facebook is an American for-profit corporation and online social media and "
 "social networking service based in Menlo Park, California, United States."
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:76
-#: includes/class-buddypress-share-activator.php:142
-#: includes/class-buddypress-share-activator.php:218
-#: includes/class-buddypress-share-settings.php:193
+#: includes/class-buddypress-share-activator.php:154
+#: includes/class-buddypress-share-activator.php:239
+#: includes/class-buddypress-share-settings.php:209
 msgid "Twitter"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:80
-#: includes/class-buddypress-share-activator.php:146
-#: includes/class-buddypress-share-activator.php:222
+#: includes/class-buddypress-share-activator.php:158
+#: includes/class-buddypress-share-activator.php:243
 msgid ""
 "Twitter is an online news and social networking service where users post "
 "and read short 140-character messages called 'tweets'. Registered users can "
@@ -520,34 +520,46 @@ msgid ""
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:88
-#: includes/class-buddypress-share-activator.php:154
-#: includes/class-buddypress-share-activator.php:230
-#: includes/class-buddypress-share-settings.php:195
+#: includes/class-buddypress-share-activator.php:166
+#: includes/class-buddypress-share-activator.php:251
+#: includes/class-buddypress-share-settings.php:211
 msgid "Linkedin"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:92
-#: includes/class-buddypress-share-activator.php:158
-#: includes/class-buddypress-share-activator.php:234
+#: includes/class-buddypress-share-activator.php:170
+#: includes/class-buddypress-share-activator.php:255
 msgid ""
 "LinkedIn is a business and employment-oriented social networking service "
 "that operates via websites."
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:100
-#: includes/class-buddypress-share-activator.php:164
-#: includes/class-buddypress-share-activator.php:240
-#: includes/class-buddypress-share-settings.php:200
+#: includes/class-buddypress-share-activator.php:176
+#: includes/class-buddypress-share-activator.php:261
+#: includes/class-buddypress-share-settings.php:216
 msgid "Whatsapp"
 msgstr ""
 
 #: includes/class-buddypress-share-activator.php:104
-#: includes/class-buddypress-share-activator.php:166
-#: includes/class-buddypress-share-activator.php:242
+#: includes/class-buddypress-share-activator.php:178
+#: includes/class-buddypress-share-activator.php:263
 msgid ""
 "WhatsApp Messenger, or simply WhatsApp, is an American freeware, "
 "cross-platform messaging and Voice over IP (VoIP) service owned by "
 "Facebook, Inc."
+msgstr ""
+
+#: includes/class-buddypress-share-activator.php:112
+#: includes/class-buddypress-share-activator.php:183
+#: includes/class-buddypress-share-activator.php:269
+msgid "Copy Activity"
+msgstr ""
+
+#: includes/class-buddypress-share-activator.php:116
+#: includes/class-buddypress-share-activator.php:185
+#: includes/class-buddypress-share-activator.php:271
+msgid "Enable this option to copy activity."
 msgstr ""
 
 #: includes/class-buddypress-share-settings.php:64
@@ -562,108 +574,112 @@ msgstr ""
 msgid "BuddyPress Share"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:80
+#: includes/class-buddypress-share-settings.php:81
 msgid "Extra Options"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:83
+#: includes/class-buddypress-share-settings.php:87
 msgid "Open as popup window"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:111
+#: includes/class-buddypress-share-settings.php:123
 msgid ""
 "Default is set to open window in popup. If this option is disabled then "
 "services open in new tab instead popup.  "
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:125
+#: includes/class-buddypress-share-settings.php:137
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:132
+#: includes/class-buddypress-share-settings.php:144
 msgid "BuddyPress Activity Social Share Settings"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:148
+#: includes/class-buddypress-share-settings.php:161
 msgid "General Settings"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:174
+#: includes/class-buddypress-share-settings.php:190
 msgid "Add Social Services"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:179
+#: includes/class-buddypress-share-settings.php:195
 msgid "Component"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:180
+#: includes/class-buddypress-share-settings.php:196
 msgid "Select Service"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:187
-#: includes/class-buddypress-share-settings.php:246
+#: includes/class-buddypress-share-settings.php:203
+#: includes/class-buddypress-share-settings.php:263
 msgid "Social Sites"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:191
+#: includes/class-buddypress-share-settings.php:207
 msgid "select"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:194
+#: includes/class-buddypress-share-settings.php:210
 msgid "Pinterest"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:196
+#: includes/class-buddypress-share-settings.php:212
 msgid "Reddit"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:197
+#: includes/class-buddypress-share-settings.php:213
 msgid "WordPress"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:198
+#: includes/class-buddypress-share-settings.php:214
 msgid "Pocket"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:199
+#: includes/class-buddypress-share-settings.php:215
 msgid "Email"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:203
-#: includes/class-buddypress-share-settings.php:213
-#: includes/class-buddypress-share-settings.php:224
-msgid "This field is required!"
-msgstr ""
-
-#: includes/class-buddypress-share-settings.php:209
-msgid "Font Awesome Icon Class"
+#: includes/class-buddypress-share-settings.php:217
+msgid "Copy"
 msgstr ""
 
 #: includes/class-buddypress-share-settings.php:220
-#: includes/class-buddypress-share-settings.php:248
+#: includes/class-buddypress-share-settings.php:230
+#: includes/class-buddypress-share-settings.php:241
+msgid "This field is required!"
+msgstr ""
+
+#: includes/class-buddypress-share-settings.php:226
+msgid "Font Awesome Icon Class"
+msgstr ""
+
+#: includes/class-buddypress-share-settings.php:237
+#: includes/class-buddypress-share-settings.php:265
 msgid "Description"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:233
+#: includes/class-buddypress-share-settings.php:250
 msgid "Add Services"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:249
+#: includes/class-buddypress-share-settings.php:266
 msgid "Action"
 msgstr ""
 
-#: includes/class-buddypress-share-settings.php:313
+#: includes/class-buddypress-share-settings.php:331
 msgid "Save Changes"
 msgstr ""
 
-#: public/class-buddypress-share-public.php:136
+#: public/class-buddypress-share-public.php:135
 msgid "Share"
 msgstr ""
 
-#: public/class-buddypress-share-public.php:185
+#: public/class-buddypress-share-public.php:184
 msgid "Link Copied!"
 msgstr ""
 
-#: public/class-buddypress-share-public.php:188
+#: public/class-buddypress-share-public.php:189
 msgid "Please enable share services!"
 msgstr ""
