@@ -5,7 +5,7 @@ Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
 Tested up to: 5.5.3
-Stable tag: 2.6.0
+Stable tag: 2.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,7 +37,6 @@ This section describes how to install the plugin and get it working.
 5. Enjoy
 
 If you need additional help you can contact us for [Custom Development](https://wbcomdesigns.com/hire-us/).
-
 
 
 == Frequently Asked Questions ==
@@ -79,6 +78,9 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(jpg|jpeg|gif).
 
 == Changelog ==
+= 2.7.0 =
+* Enhancement - Added admin option for copy activity
+
 = 2.6.0 =
 * Enhancement - #54 Added Copy to Clipboard Functionality
 * Enhancement - Added Whatsapp Icon 
