@@ -150,3 +150,23 @@ body:not(.logged-in).bp-nouveau #buddypress .activity-list .activity-item .activ
     content: '\e927';
     font-family: bb-icons;
 }
+
+/* kleo theme fixes */
+body.kleo #buddypress .activity-meta a.button.bp-share-button {
+    line-height: initial;
+}
+
+/* OneCommunity theme fixes */
+body.onecommunity.bp-nouveau #buddypress .activity-list .activity-item .activity-meta .bp-share-button {
+    display: block;
+    padding: 0 8px;
+}
+
+body.onecommunity.bp-nouveau .activity-list .activity-item .activity-meta .bp-share-button::before {
+    content: none;
+}
+
+/* rehub theme fixes */
+body.rehub-theme #buddypress div.activity-meta a.bp-share-button:hover span {
+    background: none;
+}
