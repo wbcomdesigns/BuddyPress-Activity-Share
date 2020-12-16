@@ -124,6 +124,10 @@ a.bp-share.has-popup {
     align-items: center;
 }
 
+body:not(.logged-in).bp-nouveau #buddypress .activity-list .activity-item .activity-meta .bp-share-button {
+    color: inherit;
+}
+
 .bp-nouveau .activity-list .activity-item .activity-meta .bp-share-button::before {
     content: "\f237";
     font-family: 'dashicons';
