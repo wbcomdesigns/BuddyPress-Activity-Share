@@ -110,7 +110,7 @@ a.bp-share.has-popup {
 
 .bp-nouveau #buddypress .activity-list .activity-item .activity-meta .bp-share-button {
     background: none;
-    color: inherit;
+    /*color: inherit;*/
     font-size: inherit;
     margin: 0;
     padding: 0;
@@ -139,4 +139,10 @@ a.bp-share.has-popup {
 
 .tooltip-hide {
     display: none;
+}
+
+/* BuddyBoss Theme Specific */
+.bp-nouveau.buddyboss-theme .activity-list .activity-item .activity-meta .bp-share-button::before {
+    content: '\e927';
+    font-family: bb-icons;
 }
