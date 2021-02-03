@@ -1,4 +1,4 @@
-=== BuddyPress Activity Social Share ===
+=== Wbcom Designs - BP Activity Social Share ===
 
 Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
@@ -83,7 +83,7 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 
 = 2.6.0 =
 * Enhancement - #54 Added Copy to Clipboard Functionality
-* Enhancement - Added Whatsapp Icon 
+* Enhancement - Added Whatsapp Icon
 * Fix - #68 issues with BuddyBoss Theme
 
 = 2.5.0 =
