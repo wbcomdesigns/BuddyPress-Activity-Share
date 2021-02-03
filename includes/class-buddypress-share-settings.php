@@ -131,7 +131,7 @@ class Buddypress_Share_Options_Page {
 	 * @since    1.0.0
 	 */
 	public function bp_share_plugin_options() {
-		$tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'bpas_general_settings';
+		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_general_settings';
 		// admin check
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'buddypress-share' ) );
@@ -162,8 +162,8 @@ class Buddypress_Share_Options_Page {
 		);
 		$tab_html  = '<div class="wbcom-tabs-section"><h2 class="nav-tab-wrapper">';
 		foreach ( $bpas_tabs as $bpas_tab => $bpas_name ) {
-			$class     = ( $bpas_tab == $current ) ? 'nav-tab-active' : '';
-			$tab_html .= '<a class="nav-tab ' . $class . '" href="admin.php?page=buddypress-share&tab=' . $bpas_tab . '">' . $bpas_name . '</a>';
+			$class     = ( $bpas_tab === $current ) ? 'nav-tab-active' : '';
+			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' . esc_url( $bpas_tab ) . '">' . esc_html( $bpas_name ) . '</a>';
 		}
 		$tab_html .= '</h2></div>';
 		echo $tab_html;
@@ -171,7 +171,7 @@ class Buddypress_Share_Options_Page {
 	}
 
 	public function bpas_include_admin_setting_tabs( $bpas_tab ) {
-		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : $bpas_tab;
+		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : $bpas_tab;
 		switch ( $bpas_tab ) {
 			case 'bpas_general_settings':
 				$this->bpas_general_setting_section();
@@ -185,7 +185,7 @@ class Buddypress_Share_Options_Page {
 	public function bpas_general_setting_section() {
 		?>
 		<div class="wbcom-tab-content">
-			<form method="post" action="<?php echo admin_url( 'options.php' ); ?>" id="bp_share_form">
+			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>" id="bp_share_form">
 			<?php wp_nonce_field( 'update-options' ); ?>
 					<h3><?php esc_html_e( 'Add Social Services', 'buddypress-share' ); ?></h3>
 					<table cellspacing="0" class="add_share_services widefat fixed plugins">
@@ -274,18 +274,18 @@ class Buddypress_Share_Options_Page {
 							foreach ( $social_options as $service_key => $social_option ) {
 
 								?>
-									<tr class="bp-share-services-row" id="<?php echo 'tr_' . $service_key; ?>">
+									<tr class="bp-share-services-row" id="<?php echo 'tr_' . esc_attr( $service_key ); ?>">
 										<th scope="row" id="bp_share_chb" class="bp-share-td">
-											<input type="checkbox" name="<?php echo 'chb_' . $service_key; ?>" value="1" <?php	echo ( $social_options[ $service_key ][ 'chb_' . $service_key ] == 1 ) ? 'checked="checked"' : ''; ?>
+											<input type="checkbox" name="<?php echo 'chb_' . esc_attr( $service_key ); ?>" value="1" <?php	echo ( 1 === $social_options[ $service_key ][ 'chb_' . $service_key ] ) ? 'checked="checked"' : ''; ?>
 											/>
 										</th>
 										<td class="bp-share-title bp-share-td" style="width: 190px;">
-											<strong style="margin-top: 3px;"><i class="<?php echo $social_option['service_icon']; ?> fa-lg"></i> <?php echo $social_option['service_name']; ?></strong>
+											<strong style="margin-top: 3px;"><i class="<?php echo esc_attr( $social_option['service_icon'] ); ?> fa-lg"></i> <?php echo esc_html( $social_option['service_name'] ); ?></strong>
 											<div class="row-actions-visible"></div>
 										</td>
 										<td class="bp-share-column-description desc bp-share-td">
 											<div class="plugin-description">
-												<p><?php echo $social_option['service_description']; ?></p>
+												<p><?php echo esc_html( $social_option['service_description'] ); ?></p>
 											</div>
 											<div class="active second plugin-version-author-uri">
 											</div>
@@ -323,7 +323,7 @@ class Buddypress_Share_Options_Page {
 									$social_key_string = rtrim( $social_key_string, ', ' );
 								}
 								?>
-					<input type="hidden" name="page_options" value="<?php echo $social_key_string; ?>" />
+					<input type="hidden" name="page_options" value="<?php echo esc_attr( $social_key_string ); ?>" />
 								<?php
 							}
 							?>
@@ -331,23 +331,23 @@ class Buddypress_Share_Options_Page {
 					<input type="submit" class="button-primary bp_share_option_save" value="<?php esc_html_e( 'Save Changes', 'buddypress-share' ); ?>" />
 				</p>
 			</form>
-							<?php do_action( 'bp_share_add_services_options', $arg1 = '', $arg2 = '' ); ?>
+				<?php do_action( 'bp_share_add_services_options', $arg1 = '', $arg2 = '' ); ?>
 		</div>
-							<?php
+		<?php
 	}
 
-						/**
-						 * Display already inserted services.
-						 *
-						 * @access public
-						 * @author  Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * Display already inserted services.
+	 *
+	 * @access public
+	 * @author  Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_insert_services_ajax() {
-		$service_name        = sanitize_text_field( $_POST['service_name'] );
-		$service_faw         = sanitize_text_field( $_POST['service_faw'] );
-		$service_key         = $service_value = sanitize_text_field( $_POST['service_value'] );
-		$service_description = sanitize_text_field( $_POST['service_description'] );
+		$service_name        = isset( $_POST['service_name'] ) ? sanitize_text_field( wp_unslash( $_POST['service_name'] ) ) : '';
+		$service_faw         = isset( $_POST['service_faw'] ) ? sanitize_text_field( wp_unslash( $_POST['service_faw'] ) ) : '';
+		$service_key         = $service_value = isset( $_POST['service_value'] ) ? sanitize_text_field( wp_unslash( $_POST['service_value'] ) ) : '';
+		$service_description = isset( $_POST['service_description'] ) ? sanitize_text_field( wp_unslash( $_POST['service_description'] ) ) : '';
 
 		$option_name             = 'bp_share_services';
 		$html_view_arr           = array();
@@ -438,13 +438,13 @@ class Buddypress_Share_Options_Page {
 		die();
 	}
 
-						/**
-						 * Ajax Call when delete any inserted services.
-						 *
-						 * @access public
-						 * @author   Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * Ajax Call when delete any inserted services.
+	 *
+	 * @access public
+	 * @author   Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_delete_services_ajax() {
 		if ( ! empty( $_POST ) && check_admin_referer( 'bp_share_nonce', 'nonce' ) ) {
 			$option_name  = 'bp_share_services';
@@ -463,13 +463,13 @@ class Buddypress_Share_Options_Page {
 		die();
 	}
 
-						/**
-						 * bp_share_delete_user_services_ajax.
-						 *
-						 * @access public
-						 * @author   Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * bp_share_delete_user_services_ajax.
+	 *
+	 * @access public
+	 * @author   Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_delete_user_services_ajax() {
 		$option_name   = 'bp_share_services';
 		$service_array = $_POST['service_array'];
@@ -487,13 +487,13 @@ class Buddypress_Share_Options_Page {
 		die();
 	}
 
-						/**
-						 * bp_share_chb_services_ajax.
-						 *
-						 * @access public
-						 * @author   Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * bp_share_chb_services_ajax.
+	 *
+	 * @access public
+	 * @author   Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_chb_services_ajax() {
 		if ( ! empty( $_POST ) && check_admin_referer( 'bp_share_nonce', 'nonce' ) ) {
 			$option_name      = 'bp_share_services';
@@ -531,13 +531,13 @@ class Buddypress_Share_Options_Page {
 		die();
 	}
 
-						/**
-						 * bp_share_add_options.
-						 *
-						 * @access public
-						 * @author   Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * bp_share_add_options.
+	 *
+	 * @access public
+	 * @author   Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_add_options( $activity_url, $activity_title ) {
 		$services = apply_filters( 'bp_share_add_services', $services = array(), $activity_url = '', $activity_title = '' );
 		if ( ! empty( $services ) ) {
@@ -602,13 +602,13 @@ class Buddypress_Share_Options_Page {
 		}
 	}
 
-						/**
-						 * bp_share_user_added_services.
-						 *
-						 * @access public
-						 * @author   Wbcom Designs
-						 * @since    1.0.0
-						 */
+	/**
+	 * bp_share_user_added_services.
+	 *
+	 * @access public
+	 * @author   Wbcom Designs
+	 * @since    1.0.0
+	 */
 	public function bp_share_user_added_services( $services, $activity_url, $activity_title ) {
 		$user_services = apply_filters( 'bp_share_add_services', $services, $activity_url, $activity_title );
 		$service       = get_site_option( 'bp_share_services' );
@@ -621,13 +621,11 @@ class Buddypress_Share_Options_Page {
 				foreach ( $options_values as $options_key => $options_value ) {
 					foreach ( $service as $key => $value ) {
 						if ( isset( $key ) && $key == $options_key && $value[ 'chb_' . $key ] == 1 ) {
-							echo '<a target="blank" class="bp-share" href="' . $options_value . '" rel="' . $options_key . '"><span class="fa-stack fa-lg"><i class="' . $value['service_icon'] . '"></i></span></a>';
+							echo '<a target="blank" class="bp-share" href="' . esc_url( $options_value ) . '" rel="' . esc_attr( $options_key ) . '"><span class="fa-stack fa-lg"><i class="' . esc_attr( $value['service_icon'] ) . '"></i></span></a>';
 						}
 					}
 				}
 			}
 		}
 	}
-
-						// END:build the admin options page
 }
