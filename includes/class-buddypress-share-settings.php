@@ -447,8 +447,8 @@ class Buddypress_Share_Options_Page {
 	 */
 	public function bp_share_delete_services_ajax() {
 		if ( ! empty( $_POST ) && check_admin_referer( 'bp_share_nonce', 'nonce' ) ) {
-			$option_name  = 'bp_share_services';
-			$service_name = $_POST['service_name'];
+			$option_name  = 'bp_share_services';			
+			$service_name = filter_var_array( $_POST['service_name'], FILTER_SANITIZE_STRING );
 			$services     = get_site_option( $option_name );
 			if ( ! empty( $services ) ) {
 				foreach ( $services as $service_key => $value ) {
@@ -471,8 +471,8 @@ class Buddypress_Share_Options_Page {
 	 * @since    1.0.0
 	 */
 	public function bp_share_delete_user_services_ajax() {
-		$option_name   = 'bp_share_services';
-		$service_array = $_POST['service_array'];
+		$option_name   = 'bp_share_services';		
+		$service_array = filter_var_array( $_POST['service_array'], FILTER_SANITIZE_STRING );
 		$services      = get_site_option( $option_name );
 		if ( ! empty( $service_array ) ) {
 			foreach ( $service_array as $service_array_key => $service_array_value ) {
@@ -497,8 +497,8 @@ class Buddypress_Share_Options_Page {
 	public function bp_share_chb_services_ajax() {
 		if ( ! empty( $_POST ) && check_admin_referer( 'bp_share_nonce', 'nonce' ) ) {
 			$option_name      = 'bp_share_services';
-			$active_services  = isset( $_POST['active_chb_array'] ) ? wp_unslash( $_POST['active_chb_array'] ) : array();
-			$extras_options   = isset( $_POST['active_chb_extras'] ) ? wp_unslash( $_POST['active_chb_extras'] ) : array();
+			$active_services  = isset( $_POST['active_chb_array'] ) ? sanitize_text_field( wp_unslash( $_POST['active_chb_array'] ) ) : array();
+			$extras_options   = isset( $_POST['active_chb_extras'] ) ? sanitize_text_field(wp_unslash( $_POST['active_chb_extras'] ) ) : array();
 			$extra_option_new = array();
 			if ( ! empty( $extras_options ) ) {
 				if ( in_array( 'bp_share_services_open', $extras_options ) ) {
