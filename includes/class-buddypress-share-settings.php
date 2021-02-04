@@ -166,7 +166,7 @@ class Buddypress_Share_Options_Page {
 			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' . esc_url( $bpas_tab ) . '">' . esc_html( $bpas_name ) . '</a>';
 		}
 		$tab_html .= '</h2></div>';
-		echo $tab_html;
+		echo $tab_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->bpas_include_admin_setting_tabs( $current );
 	}
 
@@ -291,7 +291,7 @@ class Buddypress_Share_Options_Page {
 											</div>
 										</td>
 									<?php if ( 'bp_copy_activity' !== $service_key ) : ?>
-										<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="<?php echo $service_key; ?>"><i class="fa fa-window-close"></i></p></td>
+										<td class="service_delete bp-share-td"><p class="service_delete_icon" data-bind="<?php echo esc_attr($service_key); ?>"><i class="fa fa-window-close"></i></p></td>
 									<?php endif; ?>
 									</tr>
 									<?php
@@ -455,7 +455,7 @@ class Buddypress_Share_Options_Page {
 					if ( $service_key == $service_name ) {
 						unset( $services[ $service_key ] );
 						update_site_option( $option_name, $services );
-						echo $service_key;
+						echo esc_html($service_key);
 					}
 				}
 			}
