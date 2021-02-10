@@ -22,6 +22,9 @@ A perfect plugin to make your user activities on your website social-share-frien
 
 **If you like the plugin functionality, please, leave a review to help the plugin grow!**
 
+=== THEME - WORDPRESS THEME WITH OUTSTANDING BUDDYPRESS SUPPORT ===
+* [FREE BuddyPress Theme: BuddyX](https://wordpress.org/themes/buddyx/) - Offers unique layouts with clean code and easy-to-customize options giving you a whole new way to visualize BuddyPress.
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
