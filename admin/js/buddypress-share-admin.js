@@ -89,77 +89,46 @@ jQuery(function() {
 
 
         jQuery(document).on('click', '.service_delete_icon', function () {
+              var service = jQuery(this).data().bind;
+              var data = {
+                      'action': 'bp_share_delete_services_ajax',
+                      'service_name': service,
+                      'nonce' : my_ajax_object.nonce
+              };
 
-                var service = jQuery(this).data().bind;
-
-                var data = {
-
-                        'action': 'bp_share_delete_services_ajax',
-
-                        'service_name': service,
-
-                        'nonce' : my_ajax_object.nonce
-
-                };
-
-                jQuery(this).html('<i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>');
-
-                // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-
-                jQuery.post(my_ajax_object.ajax_url, data, function (response) {
-
-                        jQuery('#tr_' + jQuery.trim(response)).fadeOut("normal", function () {
-
-                                jQuery(this).remove();
-
-                        });
-
-                });
-
+              jQuery(this).html('<i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>');
+              // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+              jQuery.post(my_ajax_object.ajax_url, data, function (response) {
+                  jQuery('#tr_' + jQuery.trim(response)).fadeOut("normal", function () {
+                          jQuery(this).remove();
+                  });
+              });
         });
 
 
 
         jQuery(document).on('click', '.button-primary.bp_share_option_save', function () {
+            var selected = [];
+            jQuery('#bp_share_chb input:checked').each(function () {
+                    selected.push(jQuery(this).attr('name'));
+            });
 
-                var selected = [];
+            var selected_extras = [];
+            jQuery('.bp_share_settings_section_callback_class input:checked').each(function () {
+                    selected_extras.push(jQuery(this).attr('name'));
+            });
 
-                jQuery('#bp_share_chb input:checked').each(function () {
-
-                        selected.push(jQuery(this).attr('name'));
-
-                });
-
-                var selected_extras = [];
-
-                jQuery('.bp_share_settings_section_callback_class input:checked').each(function () {
-
-                        selected_extras.push(jQuery(this).attr('name'));
-
-                });
-
-                var data = {
-
-                        'action': 'bp_share_chb_services_ajax',
-
-                        'active_chb_array': selected,
-
-                        'active_chb_extras': selected_extras,
-
-                        'nonce' : my_ajax_object.nonce
-
-                };
-
-                // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-
-                jQuery.post(my_ajax_object.ajax_url, data, function (response) {
-
-                       location.reload();
-
-                });
-
-                return false;
-
+            var data = {
+                'action': 'bp_share_chb_services_ajax',
+                'active_chb_array': selected,
+                'active_chb_extras': selected_extras,
+                'nonce' : my_ajax_object.nonce
+            };
+            // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+            jQuery.post(my_ajax_object.ajax_url, data, function (response) {
+              location.reload();
+            });
+            return false;
         });
 
 });

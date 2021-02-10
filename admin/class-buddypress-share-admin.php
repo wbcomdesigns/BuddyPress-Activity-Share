@@ -77,7 +77,7 @@ class Buddypress_Share_Admin {
 		if ( 'wb-plugins_page_buddypress-share' !== $hook ) {
 			return;
 		}
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/buddypress-share-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/buddypress-share-admin.js', array( 'jquery' ), $this->version, true );
 		wp_localize_script(
 			$this->plugin_name,
 			'my_ajax_object',
