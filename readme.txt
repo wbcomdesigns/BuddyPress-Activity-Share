@@ -1,11 +1,11 @@
-=== Wbcom Designs - BP Activity Social Share ===
+=== Wbcom Designs - BuddyPress Activity Social Share ===
 
 Contributors: vapvarun,wbcomdesigns
 Donate link: https://wbcomdesigns.com
 Tags: buddypress,activity,share
 Requires at least: 4.0
 Tested up to: 5.6.1
-Stable tag: 2.9.0
+Stable tag: 2.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Please visit [wbcomdesigns] (http://wbcomdesigns.com/) for any query related to 
 3. The screenshot shows FAQ(s) related to BuddyPress Activity Social Share plugin and corresponds to screenshot-3.(jpg|jpeg|gif).
 
 == Changelog ==
+= 2.9.1 =
+* Fix - Fixed social site and remove social site options
+
 = 2.8.0 =
 * Fix - Fixed missed esacping functions
 * Fix - Renamed plugin Title
