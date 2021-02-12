@@ -211,6 +211,11 @@ class Buddypress_Share_Public {
     xmlns:fb="http://www.facebook.com/2008/fbml"';
 	}
 
+	/**
+	 * Share activity with og meta values
+	 *
+	 * @return
+	 */
 	public function bp_share_opengraph() {
 		global $bp, $post;
 		if ( ( bp_is_active( 'activity' ) && bp_is_current_component( 'activity' ) && ! empty( $bp->current_action ) && is_numeric( $bp->current_action ) && bp_is_single_activity() ) ) {
@@ -275,6 +280,15 @@ class Buddypress_Share_Public {
 				if ( ! empty( $media_ids[0] ) ) {
 					$media_data = new BP_Media( $media_ids[0] );
 					$og_image   = esc_attr( wp_get_attachment_image_url( $media_data->attachment_id, 'full' ) );
+				}
+			}
+
+			// Youzer media support
+			if ( class_exists( 'Youzer' ) ) {
+				$media_ids = bp_activity_get_meta( $activity_obj->id, 'yz_attachments', true );
+				if ( ! empty( $media_ids ) ) {
+					$media_id = array_key_first( $media_ids );
+					$og_image = esc_attr( wp_get_attachment_image_url( $media_id, 'full' ) );
 				}
 			}
 
