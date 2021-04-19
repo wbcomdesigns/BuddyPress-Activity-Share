@@ -146,9 +146,10 @@ body:not(.logged-in).bp-nouveau #buddypress .activity-list .activity-item .activ
 }
 
 /* BuddyBoss Theme Specific */
-.bp-nouveau.buddyboss-theme .activity-list .activity-item .activity-meta .bp-share-button::before {
+.bp-nouveau.buddyboss-theme .activity-list .activity-item .bp-share-button::before {
     content: '\e927';
     font-family: bb-icons;
+    font-size: initial;
 }
 
 /* kleo theme fixes */
