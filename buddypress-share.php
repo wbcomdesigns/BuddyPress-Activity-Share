@@ -30,6 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'BP_SHARE', 'buddypress-share' );
 define( 'BP_ACTIVITY_SHARE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'BP_ACTIVITY_SHARE_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+define( 'BP_ACTIVITY_SHARE_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 /**
  * The code that runs during plugin activation.
@@ -187,5 +188,19 @@ function bpshare_required_plugin_admin_notice() {
 	echo '</p></div>';
 	if ( isset( $_GET['activate'] ) ) {
 		unset( $_GET['activate'] );
+	}
+}
+
+
+/**
+ * redirect to plugin settings page after activated
+ */
+
+add_action( 'activated_plugin', 'bpshare_activation_redirect_settings' );
+function bpshare_activation_redirect_settings( $plugin ){
+
+	if( $plugin == plugin_basename( __FILE__ ) ) {
+		wp_redirect( admin_url( 'admin.php?page=buddypress-share' ) ) ;
+		exit;
 	}
 }

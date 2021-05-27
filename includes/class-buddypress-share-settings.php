@@ -131,7 +131,7 @@ class Buddypress_Share_Options_Page {
 	 * @since    1.0.0
 	 */
 	public function bp_share_plugin_options() {
-		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_general_settings';
+		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_welcome';
 		// admin check
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'buddypress-share' ) );
@@ -158,12 +158,13 @@ class Buddypress_Share_Options_Page {
 
 	public function bpas_plugin_settings_tabs( $current ) {
 		$bpas_tabs = array(
+			'bpas_welcome' => esc_html__( 'Welcome', 'buddypress-share' ),
 			'bpas_general_settings' => esc_html__( 'General Settings', 'buddypress-share' ),
 		);
 		$tab_html  = '<div class="wbcom-tabs-section"><h2 class="nav-tab-wrapper">';
 		foreach ( $bpas_tabs as $bpas_tab => $bpas_name ) {
 			$class     = ( $bpas_tab === $current ) ? 'nav-tab-active' : '';
-			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' . esc_url( $bpas_tab ) . '">' . esc_html( $bpas_name ) . '</a>';
+			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' .  $bpas_tab  . '">' . esc_html( $bpas_name ) . '</a>';
 		}
 		$tab_html .= '</h2></div>';
 		echo $tab_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -171,17 +172,26 @@ class Buddypress_Share_Options_Page {
 	}
 
 	public function bpas_include_admin_setting_tabs( $bpas_tab ) {
-		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : $bpas_tab;
+		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_welcome';
 		switch ( $bpas_tab ) {
+			case 'bpas_welcome':
+				$this->bpas_welcome_section();
+				break;
 			case 'bpas_general_settings':
 				$this->bpas_general_setting_section();
 				break;
 			default:
-				$this->bpas_general_setting_section();
+				$this->bpas_welcome_section();
 				break;
 		}
 	}
-
+	
+	public function bpas_welcome_section() {		
+		
+		if ( file_exists( BP_ACTIVITY_SHARE_PLUGIN_PATH . 'admin/bp-welcome-page.php' ) ) {
+			require_once BP_ACTIVITY_SHARE_PLUGIN_PATH . 'admin/bp-welcome-page.php';
+		}
+	}
 	public function bpas_general_setting_section() {
 		?>
 		<div class="wbcom-tab-content">
