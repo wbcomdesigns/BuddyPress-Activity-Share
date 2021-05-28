@@ -13,7 +13,8 @@ if (!defined('ABSPATH')) {
     <div class="wbcom-welcome-main-wrapper">
         <div class="wbcom-welcome-head">
             <h2 class="wbcom-welcome-title"><?php esc_html_e( 'Wbcom Designs - BuddyPress Activity Social Share', 'buddypress-share' ); ?></h2>
-            <p class="wbcom-welcome-description"><?php esc_html_e( 'Allow the site admin to select global friends for all his members with BuddyPress Auto friends plugin. If you are starting an online community with BuddyPress and want some common friends to be added to the friend list of your members, BuddyPress Auto friends is the perfect option for you.', 'buddypress-share' ) ?></p>
+            <p class="wbcom-welcome-description"><?php esc_html_e( 'BuddyPress Activity Social Share plugin allows users to share activity “Post Updates” to their social networking profiles.', 'buddypress-share' ) ?></p>
+            <p class="wbcom-welcome-description"><?php esc_html_e( 'This plugin adds the option ‘Share’ to BuddyPress Activity in post updates section parallel to the ‘Comment’, ‘Favorite’ and ‘Delete’ option.', 'buddypress-share' ) ?></p>
         </div><!-- .wbcom-welcome-head -->
 
         <div class="wbcom-welcome-content">
@@ -31,8 +32,8 @@ if (!defined('ABSPATH')) {
 
                     <div class="col">
                         <h3><span class="dashicons dashicons-book"></span><?php esc_html_e( 'Documentation', 'buddypress-share' ); ?></h3>
-                        <p><?php esc_html_e( 'We have prepared an extensive guide on BuddyPress Auto Friends to learn all aspects of the plugin. You will find most of your answers here.', 'buddypress-share' ); ?></p>
-                        <a href="<?php echo esc_url( 'https://wbcomdesigns.com/docs/buddypress-paid-addons/buddypress-share/' ); ?>" class="button button-primary button-welcome-support" target="_blank"><?php esc_html_e( 'Read Documentation', 'buddypress-share' ); ?></a>
+                        <p><?php esc_html_e( 'We have prepared an extensive guide on BuddyPress Activity Social Share to learn all aspects of the plugin. You will find most of your answers here.', 'buddypress-share' ); ?></p>
+                        <a href="<?php echo esc_url( 'https://wbcomdesigns.com/docs/buddypress-free-addons/buddypress-activity-social-share/' ); ?>" class="button button-primary button-welcome-support" target="_blank"><?php esc_html_e( 'Read Documentation', 'buddypress-share' ); ?></a>
                     </div>
 
                     <div class="col">

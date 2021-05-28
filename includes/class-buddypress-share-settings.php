@@ -138,6 +138,8 @@ class Buddypress_Share_Options_Page {
 		}
 		?>
 			<div class="wrap">
+                            <hr class="wp-header-end">
+                            <div class="wbcom-wrap">
 				<div class="bpss-header">
 				<?php echo do_shortcode( '[wbcom_admin_setting_header]' ); ?>
 					<h1 class="wbcom-plugin-heading">
@@ -152,6 +154,7 @@ class Buddypress_Share_Options_Page {
 				do_settings_sections( $tab );
 				?>
 				</div>
+                            </div>
 			</div>
 			<?php
 	}
@@ -161,12 +164,12 @@ class Buddypress_Share_Options_Page {
 			'bpas_welcome' => esc_html__( 'Welcome', 'buddypress-share' ),
 			'bpas_general_settings' => esc_html__( 'General Settings', 'buddypress-share' ),
 		);
-		$tab_html  = '<div class="wbcom-tabs-section"><h2 class="nav-tab-wrapper">';
+		$tab_html  = '<div class="wbcom-tabs-section"><div class="nav-tab-wrapper"><div class="wb-responsive-menu"><span>' . esc_html( 'Menu' ) . '</span><input class="wb-toggle-btn" type="checkbox" id="wb-toggle-btn"><label class="wb-toggle-icon" for="wb-toggle-btn"><span class="wb-icon-bars"></span></label></div><ul>';
 		foreach ( $bpas_tabs as $bpas_tab => $bpas_name ) {
 			$class     = ( $bpas_tab === $current ) ? 'nav-tab-active' : '';
-			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' .  $bpas_tab  . '">' . esc_html( $bpas_name ) . '</a>';
+			$tab_html .= '<li><a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' .  $bpas_tab  . '">' . esc_html( $bpas_name ) . '</a></li>';
 		}
-		$tab_html .= '</h2></div>';
+		$tab_html .= '</div></ul></div>';
 		echo $tab_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->bpas_include_admin_setting_tabs( $current );
 	}
