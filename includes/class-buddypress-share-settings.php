@@ -131,13 +131,15 @@ class Buddypress_Share_Options_Page {
 	 * @since    1.0.0
 	 */
 	public function bp_share_plugin_options() {
-		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_general_settings';
+		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_welcome';
 		// admin check
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'buddypress-share' ) );
 		}
 		?>
 			<div class="wrap">
+                            <hr class="wp-header-end">
+                            <div class="wbcom-wrap">
 				<div class="bpss-header">
 				<?php echo do_shortcode( '[wbcom_admin_setting_header]' ); ?>
 					<h1 class="wbcom-plugin-heading">
@@ -152,36 +154,47 @@ class Buddypress_Share_Options_Page {
 				do_settings_sections( $tab );
 				?>
 				</div>
+                            </div>
 			</div>
 			<?php
 	}
 
 	public function bpas_plugin_settings_tabs( $current ) {
 		$bpas_tabs = array(
+			'bpas_welcome' => esc_html__( 'Welcome', 'buddypress-share' ),
 			'bpas_general_settings' => esc_html__( 'General Settings', 'buddypress-share' ),
 		);
-		$tab_html  = '<div class="wbcom-tabs-section"><h2 class="nav-tab-wrapper">';
+		$tab_html  = '<div class="wbcom-tabs-section"><div class="nav-tab-wrapper"><div class="wb-responsive-menu"><span>' . esc_html( 'Menu' ) . '</span><input class="wb-toggle-btn" type="checkbox" id="wb-toggle-btn"><label class="wb-toggle-icon" for="wb-toggle-btn"><span class="wb-icon-bars"></span></label></div><ul>';
 		foreach ( $bpas_tabs as $bpas_tab => $bpas_name ) {
 			$class     = ( $bpas_tab === $current ) ? 'nav-tab-active' : '';
-			$tab_html .= '<a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' . esc_url( $bpas_tab ) . '">' . esc_html( $bpas_name ) . '</a>';
+			$tab_html .= '<li><a class="nav-tab ' . esc_attr( $class ) . '" href="admin.php?page=buddypress-share&tab=' .  $bpas_tab  . '">' . esc_html( $bpas_name ) . '</a></li>';
 		}
-		$tab_html .= '</h2></div>';
+		$tab_html .= '</div></ul></div>';
 		echo $tab_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->bpas_include_admin_setting_tabs( $current );
 	}
 
 	public function bpas_include_admin_setting_tabs( $bpas_tab ) {
-		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : $bpas_tab;
+		$bpas_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'bpas_welcome';
 		switch ( $bpas_tab ) {
+			case 'bpas_welcome':
+				$this->bpas_welcome_section();
+				break;
 			case 'bpas_general_settings':
 				$this->bpas_general_setting_section();
 				break;
 			default:
-				$this->bpas_general_setting_section();
+				$this->bpas_welcome_section();
 				break;
 		}
 	}
-
+	
+	public function bpas_welcome_section() {		
+		
+		if ( file_exists( BP_ACTIVITY_SHARE_PLUGIN_PATH . 'admin/bp-welcome-page.php' ) ) {
+			require_once BP_ACTIVITY_SHARE_PLUGIN_PATH . 'admin/bp-welcome-page.php';
+		}
+	}
 	public function bpas_general_setting_section() {
 		?>
 		<div class="wbcom-tab-content">
